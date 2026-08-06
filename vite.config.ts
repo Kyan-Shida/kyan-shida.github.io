@@ -1,10 +1,9 @@
-// vite.config.ts
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // ⚠️ 部署到 GitHub Pages 时改为 '/your-repo-name/'
-  // 本地开发或自定义域名根路径设为 '/'
-  base: '/',
+  // 👇 把这里的 '/' 改成你的仓库名，注意前后都要有斜杠！
+  base: '/kyan.github.io/', 
 })
