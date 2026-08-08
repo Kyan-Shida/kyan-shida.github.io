@@ -9,269 +9,563 @@ Error generating stack: `+e.message+`
 `).replace(Ad,``)}function Md(e,t){return t=jd(t),jd(e)===t}function $(e,t,n,r,a,o){switch(n){case`children`:typeof r==`string`?t===`body`||t===`textarea`&&r===``||$t(e,r):(typeof r==`number`||typeof r==`bigint`)&&t!==`body`&&$t(e,``+r);break;case`className`:Lt(e,`class`,r);break;case`tabIndex`:Lt(e,`tabindex`,r);break;case`dir`:case`role`:case`viewBox`:case`width`:case`height`:Lt(e,n,r);break;case`style`:nn(e,r,o);break;case`data`:if(t!==`object`){Lt(e,`data`,r);break}case`src`:case`href`:if(r===``&&(t!==`a`||n!==`href`)){e.removeAttribute(n);break}if(r==null||typeof r==`function`||typeof r==`symbol`||typeof r==`boolean`){e.removeAttribute(n);break}r=sn(``+r),e.setAttribute(n,r);break;case`action`:case`formAction`:if(typeof r==`function`){e.setAttribute(n,`javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you\\'re trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')`);break}if(typeof o==`function`&&(n===`formAction`?(t!==`input`&&$(e,t,`name`,a.name,a,null),$(e,t,`formEncType`,a.formEncType,a,null),$(e,t,`formMethod`,a.formMethod,a,null),$(e,t,`formTarget`,a.formTarget,a,null)):($(e,t,`encType`,a.encType,a,null),$(e,t,`method`,a.method,a,null),$(e,t,`target`,a.target,a,null))),r==null||typeof r==`symbol`||typeof r==`boolean`){e.removeAttribute(n);break}r=sn(``+r),e.setAttribute(n,r);break;case`onClick`:r!=null&&(e.onclick=cn);break;case`onScroll`:r!=null&&Q(`scroll`,e);break;case`onScrollEnd`:r!=null&&Q(`scrollend`,e);break;case`dangerouslySetInnerHTML`:if(r!=null){if(typeof r!=`object`||!(`__html`in r))throw Error(i(61));if(n=r.__html,n!=null){if(a.children!=null)throw Error(i(60));e.innerHTML=n}}break;case`multiple`:e.multiple=r&&typeof r!=`function`&&typeof r!=`symbol`;break;case`muted`:e.muted=r&&typeof r!=`function`&&typeof r!=`symbol`;break;case`suppressContentEditableWarning`:case`suppressHydrationWarning`:case`defaultValue`:case`defaultChecked`:case`innerHTML`:case`ref`:break;case`autoFocus`:break;case`xlinkHref`:if(r==null||typeof r==`function`||typeof r==`boolean`||typeof r==`symbol`){e.removeAttribute(`xlink:href`);break}n=sn(``+r),e.setAttributeNS(`http://www.w3.org/1999/xlink`,`xlink:href`,n);break;case`contentEditable`:case`spellCheck`:case`draggable`:case`value`:case`autoReverse`:case`externalResourcesRequired`:case`focusable`:case`preserveAlpha`:r!=null&&typeof r!=`function`&&typeof r!=`symbol`?e.setAttribute(n,``+r):e.removeAttribute(n);break;case`inert`:case`allowFullScreen`:case`async`:case`autoPlay`:case`controls`:case`default`:case`defer`:case`disabled`:case`disablePictureInPicture`:case`disableRemotePlayback`:case`formNoValidate`:case`hidden`:case`loop`:case`noModule`:case`noValidate`:case`open`:case`playsInline`:case`readOnly`:case`required`:case`reversed`:case`scoped`:case`seamless`:case`itemScope`:r&&typeof r!=`function`&&typeof r!=`symbol`?e.setAttribute(n,``):e.removeAttribute(n);break;case`capture`:case`download`:!0===r?e.setAttribute(n,``):!1!==r&&r!=null&&typeof r!=`function`&&typeof r!=`symbol`?e.setAttribute(n,r):e.removeAttribute(n);break;case`cols`:case`rows`:case`size`:case`span`:r!=null&&typeof r!=`function`&&typeof r!=`symbol`&&!isNaN(r)&&1<=r?e.setAttribute(n,r):e.removeAttribute(n);break;case`rowSpan`:case`start`:r==null||typeof r==`function`||typeof r==`symbol`||isNaN(r)?e.removeAttribute(n):e.setAttribute(n,r);break;case`popover`:Q(`beforetoggle`,e),Q(`toggle`,e),It(e,`popover`,r);break;case`xlinkActuate`:Rt(e,`http://www.w3.org/1999/xlink`,`xlink:actuate`,r);break;case`xlinkArcrole`:Rt(e,`http://www.w3.org/1999/xlink`,`xlink:arcrole`,r);break;case`xlinkRole`:Rt(e,`http://www.w3.org/1999/xlink`,`xlink:role`,r);break;case`xlinkShow`:Rt(e,`http://www.w3.org/1999/xlink`,`xlink:show`,r);break;case`xlinkTitle`:Rt(e,`http://www.w3.org/1999/xlink`,`xlink:title`,r);break;case`xlinkType`:Rt(e,`http://www.w3.org/1999/xlink`,`xlink:type`,r);break;case`xmlBase`:Rt(e,`http://www.w3.org/XML/1998/namespace`,`xml:base`,r);break;case`xmlLang`:Rt(e,`http://www.w3.org/XML/1998/namespace`,`xml:lang`,r);break;case`xmlSpace`:Rt(e,`http://www.w3.org/XML/1998/namespace`,`xml:space`,r);break;case`is`:It(e,`is`,r);break;case`innerText`:case`textContent`:break;default:(!(2<n.length)||n[0]!==`o`&&n[0]!==`O`||n[1]!==`n`&&n[1]!==`N`)&&(n=an.get(n)||n,It(e,n,r))}}function Nd(e,t,n,r,a,o){switch(n){case`style`:nn(e,r,o);break;case`dangerouslySetInnerHTML`:if(r!=null){if(typeof r!=`object`||!(`__html`in r))throw Error(i(61));if(n=r.__html,n!=null){if(a.children!=null)throw Error(i(60));e.innerHTML=n}}break;case`children`:typeof r==`string`?$t(e,r):(typeof r==`number`||typeof r==`bigint`)&&$t(e,``+r);break;case`onScroll`:r!=null&&Q(`scroll`,e);break;case`onScrollEnd`:r!=null&&Q(`scrollend`,e);break;case`onClick`:r!=null&&(e.onclick=cn);break;case`suppressContentEditableWarning`:case`suppressHydrationWarning`:case`innerHTML`:case`ref`:break;case`innerText`:case`textContent`:break;default:if(!kt.hasOwnProperty(n))a:{if(n[0]===`o`&&n[1]===`n`&&(a=n.endsWith(`Capture`),t=n.slice(2,a?n.length-7:void 0),o=e[gt]||null,o=o==null?null:o[n],typeof o==`function`&&e.removeEventListener(t,o,a),typeof r==`function`)){typeof o!=`function`&&o!==null&&(n in e?e[n]=null:e.hasAttribute(n)&&e.removeAttribute(n)),e.addEventListener(t,r,a);break a}n in e?e[n]=r:!0===r?e.setAttribute(n,``):It(e,n,r)}}}function Pd(e,t,n){switch(t){case`div`:case`span`:case`svg`:case`path`:case`a`:case`g`:case`p`:case`li`:break;case`img`:Q(`error`,e),Q(`load`,e);var r=!1,a=!1,o;for(o in n)if(n.hasOwnProperty(o)){var s=n[o];if(s!=null)switch(o){case`src`:r=!0;break;case`srcSet`:a=!0;break;case`children`:case`dangerouslySetInnerHTML`:throw Error(i(137,t));default:$(e,t,o,s,n,null)}}a&&$(e,t,`srcSet`,n.srcSet,n,null),r&&$(e,t,`src`,n.src,n,null);return;case`input`:Q(`invalid`,e);var c=o=s=a=null,l=null,u=null;for(r in n)if(n.hasOwnProperty(r)){var d=n[r];if(d!=null)switch(r){case`name`:a=d;break;case`type`:s=d;break;case`checked`:l=d;break;case`defaultChecked`:u=d;break;case`value`:o=d;break;case`defaultValue`:c=d;break;case`children`:case`dangerouslySetInnerHTML`:if(d!=null)throw Error(i(137,t));break;default:$(e,t,r,d,n,null)}}Jt(e,o,c,l,u,s,a,!1);return;case`select`:for(a in Q(`invalid`,e),r=s=o=null,n)if(n.hasOwnProperty(a)&&(c=n[a],c!=null))switch(a){case`value`:o=c;break;case`defaultValue`:s=c;break;case`multiple`:r=c;default:$(e,t,a,c,n,null)}t=o,n=s,e.multiple=!!r,t==null?n!=null&&Xt(e,!!r,n,!0):Xt(e,!!r,t,!1);return;case`textarea`:for(s in Q(`invalid`,e),o=a=r=null,n)if(n.hasOwnProperty(s)&&(c=n[s],c!=null))switch(s){case`value`:r=c;break;case`defaultValue`:a=c;break;case`children`:o=c;break;case`dangerouslySetInnerHTML`:if(c!=null)throw Error(i(91));break;default:$(e,t,s,c,n,null)}Qt(e,r,a,o);return;case`option`:for(l in n)if(n.hasOwnProperty(l)&&(r=n[l],r!=null))switch(l){case`selected`:e.selected=r&&typeof r!=`function`&&typeof r!=`symbol`;break;default:$(e,t,l,r,n,null)}return;case`dialog`:Q(`beforetoggle`,e),Q(`toggle`,e),Q(`cancel`,e),Q(`close`,e);break;case`iframe`:case`object`:Q(`load`,e);break;case`video`:case`audio`:for(r=0;r<_d.length;r++)Q(_d[r],e);break;case`image`:Q(`error`,e),Q(`load`,e);break;case`details`:Q(`toggle`,e);break;case`embed`:case`source`:case`link`:Q(`error`,e),Q(`load`,e);case`area`:case`base`:case`br`:case`col`:case`hr`:case`keygen`:case`meta`:case`param`:case`track`:case`wbr`:case`menuitem`:for(u in n)if(n.hasOwnProperty(u)&&(r=n[u],r!=null))switch(u){case`children`:case`dangerouslySetInnerHTML`:throw Error(i(137,t));default:$(e,t,u,r,n,null)}return;default:if(rn(t)){for(d in n)n.hasOwnProperty(d)&&(r=n[d],r!==void 0&&Nd(e,t,d,r,n,void 0));return}}for(c in n)n.hasOwnProperty(c)&&(r=n[c],r!=null&&$(e,t,c,r,n,null))}function Fd(e,t,n,r){switch(t){case`div`:case`span`:case`svg`:case`path`:case`a`:case`g`:case`p`:case`li`:break;case`input`:var a=null,o=null,s=null,c=null,l=null,u=null,d=null;for(m in n){var f=n[m];if(n.hasOwnProperty(m)&&f!=null)switch(m){case`checked`:break;case`value`:break;case`defaultValue`:l=f;default:r.hasOwnProperty(m)||$(e,t,m,null,r,f)}}for(var p in r){var m=r[p];if(f=n[p],r.hasOwnProperty(p)&&(m!=null||f!=null))switch(p){case`type`:o=m;break;case`name`:a=m;break;case`checked`:u=m;break;case`defaultChecked`:d=m;break;case`value`:s=m;break;case`defaultValue`:c=m;break;case`children`:case`dangerouslySetInnerHTML`:if(m!=null)throw Error(i(137,t));break;default:m!==f&&$(e,t,p,m,r,f)}}qt(e,s,c,l,u,d,o,a);return;case`select`:for(o in m=s=c=p=null,n)if(l=n[o],n.hasOwnProperty(o)&&l!=null)switch(o){case`value`:break;case`multiple`:m=l;default:r.hasOwnProperty(o)||$(e,t,o,null,r,l)}for(a in r)if(o=r[a],l=n[a],r.hasOwnProperty(a)&&(o!=null||l!=null))switch(a){case`value`:p=o;break;case`defaultValue`:c=o;break;case`multiple`:s=o;default:o!==l&&$(e,t,a,o,r,l)}t=c,n=s,r=m,p==null?!!r!=!!n&&(t==null?Xt(e,!!n,n?[]:``,!1):Xt(e,!!n,t,!0)):Xt(e,!!n,p,!1);return;case`textarea`:for(c in m=p=null,n)if(a=n[c],n.hasOwnProperty(c)&&a!=null&&!r.hasOwnProperty(c))switch(c){case`value`:break;case`children`:break;default:$(e,t,c,null,r,a)}for(s in r)if(a=r[s],o=n[s],r.hasOwnProperty(s)&&(a!=null||o!=null))switch(s){case`value`:p=a;break;case`defaultValue`:m=a;break;case`children`:break;case`dangerouslySetInnerHTML`:if(a!=null)throw Error(i(91));break;default:a!==o&&$(e,t,s,a,r,o)}Zt(e,p,m);return;case`option`:for(var h in n)if(p=n[h],n.hasOwnProperty(h)&&p!=null&&!r.hasOwnProperty(h))switch(h){case`selected`:e.selected=!1;break;default:$(e,t,h,null,r,p)}for(l in r)if(p=r[l],m=n[l],r.hasOwnProperty(l)&&p!==m&&(p!=null||m!=null))switch(l){case`selected`:e.selected=p&&typeof p!=`function`&&typeof p!=`symbol`;break;default:$(e,t,l,p,r,m)}return;case`img`:case`link`:case`area`:case`base`:case`br`:case`col`:case`embed`:case`hr`:case`keygen`:case`meta`:case`param`:case`source`:case`track`:case`wbr`:case`menuitem`:for(var g in n)p=n[g],n.hasOwnProperty(g)&&p!=null&&!r.hasOwnProperty(g)&&$(e,t,g,null,r,p);for(u in r)if(p=r[u],m=n[u],r.hasOwnProperty(u)&&p!==m&&(p!=null||m!=null))switch(u){case`children`:case`dangerouslySetInnerHTML`:if(p!=null)throw Error(i(137,t));break;default:$(e,t,u,p,r,m)}return;default:if(rn(t)){for(var _ in n)p=n[_],n.hasOwnProperty(_)&&p!==void 0&&!r.hasOwnProperty(_)&&Nd(e,t,_,void 0,r,p);for(d in r)p=r[d],m=n[d],!r.hasOwnProperty(d)||p===m||p===void 0&&m===void 0||Nd(e,t,d,p,r,m);return}}for(var v in n)p=n[v],n.hasOwnProperty(v)&&p!=null&&!r.hasOwnProperty(v)&&$(e,t,v,null,r,p);for(f in r)p=r[f],m=n[f],!r.hasOwnProperty(f)||p===m||p==null&&m==null||$(e,t,f,p,r,m)}function Id(e){switch(e){case`css`:case`script`:case`font`:case`img`:case`image`:case`input`:case`link`:return!0;default:return!1}}function Ld(){if(typeof performance.getEntriesByType==`function`){for(var e=0,t=0,n=performance.getEntriesByType(`resource`),r=0;r<n.length;r++){var i=n[r],a=i.transferSize,o=i.initiatorType,s=i.duration;if(a&&s&&Id(o)){for(o=0,s=i.responseEnd,r+=1;r<n.length;r++){var c=n[r],l=c.startTime;if(l>s)break;var u=c.transferSize,d=c.initiatorType;u&&Id(d)&&(c=c.responseEnd,o+=u*(c<s?1:(s-l)/(c-l)))}if(--r,t+=8*(a+o)/(i.duration/1e3),e++,10<e)break}}if(0<e)return t/e/1e6}return navigator.connection&&(e=navigator.connection.downlink,typeof e==`number`)?e:5}var Rd=null,zd=null;function Bd(e){return e.nodeType===9?e:e.ownerDocument}function Vd(e){switch(e){case`http://www.w3.org/2000/svg`:return 1;case`http://www.w3.org/1998/Math/MathML`:return 2;default:return 0}}function Hd(e,t){if(e===0)switch(t){case`svg`:return 1;case`math`:return 2;default:return 0}return e===1&&t===`foreignObject`?0:e}function Ud(e,t){return e===`textarea`||e===`noscript`||typeof t.children==`string`||typeof t.children==`number`||typeof t.children==`bigint`||typeof t.dangerouslySetInnerHTML==`object`&&t.dangerouslySetInnerHTML!==null&&t.dangerouslySetInnerHTML.__html!=null}var Wd=null;function Gd(){var e=window.event;return e&&e.type===`popstate`?e!==Wd&&(Wd=e,!0):(Wd=null,!1)}var Kd=typeof setTimeout==`function`?setTimeout:void 0,qd=typeof clearTimeout==`function`?clearTimeout:void 0,Jd=typeof Promise==`function`?Promise:void 0,Yd=typeof queueMicrotask==`function`?queueMicrotask:Jd===void 0?Kd:function(e){return Jd.resolve(null).then(e).catch(Xd)};function Xd(e){setTimeout(function(){throw e})}function Zd(e){return e===`head`}function Qd(e,t){var n=t,r=0;do{var i=n.nextSibling;if(e.removeChild(n),i&&i.nodeType===8)if(n=i.data,n===`/$`||n===`/&`){if(r===0){e.removeChild(i),Np(t);return}r--}else if(n===`$`||n===`$?`||n===`$~`||n===`$!`||n===`&`)r++;else if(n===`html`)pf(e.ownerDocument.documentElement);else if(n===`head`){n=e.ownerDocument.head,pf(n);for(var a=n.firstChild;a;){var o=a.nextSibling,s=a.nodeName;a[St]||s===`SCRIPT`||s===`STYLE`||s===`LINK`&&a.rel.toLowerCase()===`stylesheet`||n.removeChild(a),a=o}}else n===`body`&&pf(e.ownerDocument.body);n=i}while(n);Np(t)}function $d(e,t){var n=e;e=0;do{var r=n.nextSibling;if(n.nodeType===1?t?(n._stashedDisplay=n.style.display,n.style.display=`none`):(n.style.display=n._stashedDisplay||``,n.getAttribute(`style`)===``&&n.removeAttribute(`style`)):n.nodeType===3&&(t?(n._stashedText=n.nodeValue,n.nodeValue=``):n.nodeValue=n._stashedText||``),r&&r.nodeType===8)if(n=r.data,n===`/$`){if(e===0)break;e--}else n!==`$`&&n!==`$?`&&n!==`$~`&&n!==`$!`||e++;n=r}while(n)}function ef(e){var t=e.firstChild;for(t&&t.nodeType===10&&(t=t.nextSibling);t;){var n=t;switch(t=t.nextSibling,n.nodeName){case`HTML`:case`HEAD`:case`BODY`:ef(n),Ct(n);continue;case`SCRIPT`:case`STYLE`:continue;case`LINK`:if(n.rel.toLowerCase()===`stylesheet`)continue}e.removeChild(n)}}function tf(e,t,n,r){for(;e.nodeType===1;){var i=n;if(e.nodeName.toLowerCase()!==t.toLowerCase()){if(!r&&(e.nodeName!==`INPUT`||e.type!==`hidden`))break}else if(!r)if(t===`input`&&e.type===`hidden`){var a=i.name==null?null:``+i.name;if(i.type===`hidden`&&e.getAttribute(`name`)===a)return e}else return e;else if(!e[St])switch(t){case`meta`:if(!e.hasAttribute(`itemprop`))break;return e;case`link`:if(a=e.getAttribute(`rel`),a===`stylesheet`&&e.hasAttribute(`data-precedence`)||a!==i.rel||e.getAttribute(`href`)!==(i.href==null||i.href===``?null:i.href)||e.getAttribute(`crossorigin`)!==(i.crossOrigin==null?null:i.crossOrigin)||e.getAttribute(`title`)!==(i.title==null?null:i.title))break;return e;case`style`:if(e.hasAttribute(`data-precedence`))break;return e;case`script`:if(a=e.getAttribute(`src`),(a!==(i.src==null?null:i.src)||e.getAttribute(`type`)!==(i.type==null?null:i.type)||e.getAttribute(`crossorigin`)!==(i.crossOrigin==null?null:i.crossOrigin))&&a&&e.hasAttribute(`async`)&&!e.hasAttribute(`itemprop`))break;return e;default:return e}if(e=cf(e.nextSibling),e===null)break}return null}function nf(e,t,n){if(t===``)return null;for(;e.nodeType!==3;)if((e.nodeType!==1||e.nodeName!==`INPUT`||e.type!==`hidden`)&&!n||(e=cf(e.nextSibling),e===null))return null;return e}function rf(e,t){for(;e.nodeType!==8;)if((e.nodeType!==1||e.nodeName!==`INPUT`||e.type!==`hidden`)&&!t||(e=cf(e.nextSibling),e===null))return null;return e}function af(e){return e.data===`$?`||e.data===`$~`}function of(e){return e.data===`$!`||e.data===`$?`&&e.ownerDocument.readyState!==`loading`}function sf(e,t){var n=e.ownerDocument;if(e.data===`$~`)e._reactRetry=t;else if(e.data!==`$?`||n.readyState!==`loading`)t();else{var r=function(){t(),n.removeEventListener(`DOMContentLoaded`,r)};n.addEventListener(`DOMContentLoaded`,r),e._reactRetry=r}}function cf(e){for(;e!=null;e=e.nextSibling){var t=e.nodeType;if(t===1||t===3)break;if(t===8){if(t=e.data,t===`$`||t===`$!`||t===`$?`||t===`$~`||t===`&`||t===`F!`||t===`F`)break;if(t===`/$`||t===`/&`)return null}}return e}var lf=null;function uf(e){e=e.nextSibling;for(var t=0;e;){if(e.nodeType===8){var n=e.data;if(n===`/$`||n===`/&`){if(t===0)return cf(e.nextSibling);t--}else n!==`$`&&n!==`$!`&&n!==`$?`&&n!==`$~`&&n!==`&`||t++}e=e.nextSibling}return null}function df(e){e=e.previousSibling;for(var t=0;e;){if(e.nodeType===8){var n=e.data;if(n===`$`||n===`$!`||n===`$?`||n===`$~`||n===`&`){if(t===0)return e;t--}else n!==`/$`&&n!==`/&`||t++}e=e.previousSibling}return null}function ff(e,t,n){switch(t=Bd(n),e){case`html`:if(e=t.documentElement,!e)throw Error(i(452));return e;case`head`:if(e=t.head,!e)throw Error(i(453));return e;case`body`:if(e=t.body,!e)throw Error(i(454));return e;default:throw Error(i(451))}}function pf(e){for(var t=e.attributes;t.length;)e.removeAttributeNode(t[0]);Ct(e)}var mf=new Map,hf=new Set;function gf(e){return typeof e.getRootNode==`function`?e.getRootNode():e.nodeType===9?e:e.ownerDocument}var _f=E.d;E.d={f:vf,r:yf,D:Sf,C:Cf,L:wf,m:Tf,X:Df,S:Ef,M:Of};function vf(){var e=_f.f(),t=bu();return e||t}function yf(e){var t=Tt(e);t!==null&&t.tag===5&&t.type===`form`?ks(t):_f.r(e)}var bf=typeof document>`u`?null:document;function xf(e,t,n){var r=bf;if(r&&typeof t==`string`&&t){var i=Kt(t);i=`link[rel="`+e+`"][href="`+i+`"]`,typeof n==`string`&&(i+=`[crossorigin="`+n+`"]`),hf.has(i)||(hf.add(i),e={rel:e,crossOrigin:n,href:t},r.querySelector(i)===null&&(t=r.createElement(`link`),Pd(t,`link`,e),A(t),r.head.appendChild(t)))}}function Sf(e){_f.D(e),xf(`dns-prefetch`,e,null)}function Cf(e,t){_f.C(e,t),xf(`preconnect`,e,t)}function wf(e,t,n){_f.L(e,t,n);var r=bf;if(r&&e&&t){var i=`link[rel="preload"][as="`+Kt(t)+`"]`;t===`image`&&n&&n.imageSrcSet?(i+=`[imagesrcset="`+Kt(n.imageSrcSet)+`"]`,typeof n.imageSizes==`string`&&(i+=`[imagesizes="`+Kt(n.imageSizes)+`"]`)):i+=`[href="`+Kt(e)+`"]`;var a=i;switch(t){case`style`:a=Af(e);break;case`script`:a=Pf(e)}mf.has(a)||(e=h({rel:`preload`,href:t===`image`&&n&&n.imageSrcSet?void 0:e,as:t},n),mf.set(a,e),r.querySelector(i)!==null||t===`style`&&r.querySelector(jf(a))||t===`script`&&r.querySelector(Ff(a))||(t=r.createElement(`link`),Pd(t,`link`,e),A(t),r.head.appendChild(t)))}}function Tf(e,t){_f.m(e,t);var n=bf;if(n&&e){var r=t&&typeof t.as==`string`?t.as:`script`,i=`link[rel="modulepreload"][as="`+Kt(r)+`"][href="`+Kt(e)+`"]`,a=i;switch(r){case`audioworklet`:case`paintworklet`:case`serviceworker`:case`sharedworker`:case`worker`:case`script`:a=Pf(e)}if(!mf.has(a)&&(e=h({rel:`modulepreload`,href:e},t),mf.set(a,e),n.querySelector(i)===null)){switch(r){case`audioworklet`:case`paintworklet`:case`serviceworker`:case`sharedworker`:case`worker`:case`script`:if(n.querySelector(Ff(a)))return}r=n.createElement(`link`),Pd(r,`link`,e),A(r),n.head.appendChild(r)}}}function Ef(e,t,n){_f.S(e,t,n);var r=bf;if(r&&e){var i=Dt(r).hoistableStyles,a=Af(e);t||=`default`;var o=i.get(a);if(!o){var s={loading:0,preload:null};if(o=r.querySelector(jf(a)))s.loading=5;else{e=h({rel:`stylesheet`,href:e,"data-precedence":t},n),(n=mf.get(a))&&Rf(e,n);var c=o=r.createElement(`link`);A(c),Pd(c,`link`,e),c._p=new Promise(function(e,t){c.onload=e,c.onerror=t}),c.addEventListener(`load`,function(){s.loading|=1}),c.addEventListener(`error`,function(){s.loading|=2}),s.loading|=4,Lf(o,t,r)}o={type:`stylesheet`,instance:o,count:1,state:s},i.set(a,o)}}}function Df(e,t){_f.X(e,t);var n=bf;if(n&&e){var r=Dt(n).hoistableScripts,i=Pf(e),a=r.get(i);a||(a=n.querySelector(Ff(i)),a||(e=h({src:e,async:!0},t),(t=mf.get(i))&&zf(e,t),a=n.createElement(`script`),A(a),Pd(a,`link`,e),n.head.appendChild(a)),a={type:`script`,instance:a,count:1,state:null},r.set(i,a))}}function Of(e,t){_f.M(e,t);var n=bf;if(n&&e){var r=Dt(n).hoistableScripts,i=Pf(e),a=r.get(i);a||(a=n.querySelector(Ff(i)),a||(e=h({src:e,async:!0,type:`module`},t),(t=mf.get(i))&&zf(e,t),a=n.createElement(`script`),A(a),Pd(a,`link`,e),n.head.appendChild(a)),a={type:`script`,instance:a,count:1,state:null},r.set(i,a))}}function kf(e,t,n,r){var a=(a=_e.current)?gf(a):null;if(!a)throw Error(i(446));switch(e){case`meta`:case`title`:return null;case`style`:return typeof n.precedence==`string`&&typeof n.href==`string`?(t=Af(n.href),n=Dt(a).hoistableStyles,r=n.get(t),r||(r={type:`style`,instance:null,count:0,state:null},n.set(t,r)),r):{type:`void`,instance:null,count:0,state:null};case`link`:if(n.rel===`stylesheet`&&typeof n.href==`string`&&typeof n.precedence==`string`){e=Af(n.href);var o=Dt(a).hoistableStyles,s=o.get(e);if(s||(a=a.ownerDocument||a,s={type:`stylesheet`,instance:null,count:0,state:{loading:0,preload:null}},o.set(e,s),(o=a.querySelector(jf(e)))&&!o._p&&(s.instance=o,s.state.loading=5),mf.has(e)||(n={rel:`preload`,as:`style`,href:n.href,crossOrigin:n.crossOrigin,integrity:n.integrity,media:n.media,hrefLang:n.hrefLang,referrerPolicy:n.referrerPolicy},mf.set(e,n),o||Nf(a,e,n,s.state))),t&&r===null)throw Error(i(528,``));return s}if(t&&r!==null)throw Error(i(529,``));return null;case`script`:return t=n.async,n=n.src,typeof n==`string`&&t&&typeof t!=`function`&&typeof t!=`symbol`?(t=Pf(n),n=Dt(a).hoistableScripts,r=n.get(t),r||(r={type:`script`,instance:null,count:0,state:null},n.set(t,r)),r):{type:`void`,instance:null,count:0,state:null};default:throw Error(i(444,e))}}function Af(e){return`href="`+Kt(e)+`"`}function jf(e){return`link[rel="stylesheet"][`+e+`]`}function Mf(e){return h({},e,{"data-precedence":e.precedence,precedence:null})}function Nf(e,t,n,r){e.querySelector(`link[rel="preload"][as="style"][`+t+`]`)?r.loading=1:(t=e.createElement(`link`),r.preload=t,t.addEventListener(`load`,function(){return r.loading|=1}),t.addEventListener(`error`,function(){return r.loading|=2}),Pd(t,`link`,n),A(t),e.head.appendChild(t))}function Pf(e){return`[src="`+Kt(e)+`"]`}function Ff(e){return`script[async]`+e}function If(e,t,n){if(t.count++,t.instance===null)switch(t.type){case`style`:var r=e.querySelector(`style[data-href~="`+Kt(n.href)+`"]`);if(r)return t.instance=r,A(r),r;var a=h({},n,{"data-href":n.href,"data-precedence":n.precedence,href:null,precedence:null});return r=(e.ownerDocument||e).createElement(`style`),A(r),Pd(r,`style`,a),Lf(r,n.precedence,e),t.instance=r;case`stylesheet`:a=Af(n.href);var o=e.querySelector(jf(a));if(o)return t.state.loading|=4,t.instance=o,A(o),o;r=Mf(n),(a=mf.get(a))&&Rf(r,a),o=(e.ownerDocument||e).createElement(`link`),A(o);var s=o;return s._p=new Promise(function(e,t){s.onload=e,s.onerror=t}),Pd(o,`link`,r),t.state.loading|=4,Lf(o,n.precedence,e),t.instance=o;case`script`:return o=Pf(n.src),(a=e.querySelector(Ff(o)))?(t.instance=a,A(a),a):(r=n,(a=mf.get(o))&&(r=h({},n),zf(r,a)),e=e.ownerDocument||e,a=e.createElement(`script`),A(a),Pd(a,`link`,r),e.head.appendChild(a),t.instance=a);case`void`:return null;default:throw Error(i(443,t.type))}else t.type===`stylesheet`&&!(t.state.loading&4)&&(r=t.instance,t.state.loading|=4,Lf(r,n.precedence,e));return t.instance}function Lf(e,t,n){for(var r=n.querySelectorAll(`link[rel="stylesheet"][data-precedence],style[data-precedence]`),i=r.length?r[r.length-1]:null,a=i,o=0;o<r.length;o++){var s=r[o];if(s.dataset.precedence===t)a=s;else if(a!==i)break}a?a.parentNode.insertBefore(e,a.nextSibling):(t=n.nodeType===9?n.head:n,t.insertBefore(e,t.firstChild))}function Rf(e,t){e.crossOrigin??=t.crossOrigin,e.referrerPolicy??=t.referrerPolicy,e.title??=t.title}function zf(e,t){e.crossOrigin??=t.crossOrigin,e.referrerPolicy??=t.referrerPolicy,e.integrity??=t.integrity}var Bf=null;function Vf(e,t,n){if(Bf===null){var r=new Map,i=Bf=new Map;i.set(n,r)}else i=Bf,r=i.get(n),r||(r=new Map,i.set(n,r));if(r.has(e))return r;for(r.set(e,null),n=n.getElementsByTagName(e),i=0;i<n.length;i++){var a=n[i];if(!(a[St]||a[k]||e===`link`&&a.getAttribute(`rel`)===`stylesheet`)&&a.namespaceURI!==`http://www.w3.org/2000/svg`){var o=a.getAttribute(t)||``;o=e+o;var s=r.get(o);s?s.push(a):r.set(o,[a])}}return r}function Hf(e,t,n){e=e.ownerDocument||e,e.head.insertBefore(n,t===`title`?e.querySelector(`head > title`):null)}function Uf(e,t,n){if(n===1||t.itemProp!=null)return!1;switch(e){case`meta`:case`title`:return!0;case`style`:if(typeof t.precedence!=`string`||typeof t.href!=`string`||t.href===``)break;return!0;case`link`:if(typeof t.rel!=`string`||typeof t.href!=`string`||t.href===``||t.onLoad||t.onError)break;switch(t.rel){case`stylesheet`:return e=t.disabled,typeof t.precedence==`string`&&e==null;default:return!0}case`script`:if(t.async&&typeof t.async!=`function`&&typeof t.async!=`symbol`&&!t.onLoad&&!t.onError&&t.src&&typeof t.src==`string`)return!0}return!1}function Wf(e){return!(e.type===`stylesheet`&&!(e.state.loading&3))}function Gf(e,t,n,r){if(n.type===`stylesheet`&&(typeof r.media!=`string`||!1!==matchMedia(r.media).matches)&&!(n.state.loading&4)){if(n.instance===null){var i=Af(r.href),a=t.querySelector(jf(i));if(a){t=a._p,typeof t==`object`&&t&&typeof t.then==`function`&&(e.count++,e=Jf.bind(e),t.then(e,e)),n.state.loading|=4,n.instance=a,A(a);return}a=t.ownerDocument||t,r=Mf(r),(i=mf.get(i))&&Rf(r,i),a=a.createElement(`link`),A(a);var o=a;o._p=new Promise(function(e,t){o.onload=e,o.onerror=t}),Pd(a,`link`,r),n.instance=a}e.stylesheets===null&&(e.stylesheets=new Map),e.stylesheets.set(n,t),(t=n.state.preload)&&!(n.state.loading&3)&&(e.count++,n=Jf.bind(e),t.addEventListener(`load`,n),t.addEventListener(`error`,n))}}var Kf=0;function qf(e,t){return e.stylesheets&&e.count===0&&Xf(e,e.stylesheets),0<e.count||0<e.imgCount?function(n){var r=setTimeout(function(){if(e.stylesheets&&Xf(e,e.stylesheets),e.unsuspend){var t=e.unsuspend;e.unsuspend=null,t()}},6e4+t);0<e.imgBytes&&Kf===0&&(Kf=62500*Ld());var i=setTimeout(function(){if(e.waitingForImages=!1,e.count===0&&(e.stylesheets&&Xf(e,e.stylesheets),e.unsuspend)){var t=e.unsuspend;e.unsuspend=null,t()}},(e.imgBytes>Kf?50:800)+t);return e.unsuspend=n,function(){e.unsuspend=null,clearTimeout(r),clearTimeout(i)}}:null}function Jf(){if(this.count--,this.count===0&&(this.imgCount===0||!this.waitingForImages)){if(this.stylesheets)Xf(this,this.stylesheets);else if(this.unsuspend){var e=this.unsuspend;this.unsuspend=null,e()}}}var Yf=null;function Xf(e,t){e.stylesheets=null,e.unsuspend!==null&&(e.count++,Yf=new Map,t.forEach(Zf,e),Yf=null,Jf.call(e))}function Zf(e,t){if(!(t.state.loading&4)){var n=Yf.get(e);if(n)var r=n.get(null);else{n=new Map,Yf.set(e,n);for(var i=e.querySelectorAll(`link[data-precedence],style[data-precedence]`),a=0;a<i.length;a++){var o=i[a];(o.nodeName===`LINK`||o.getAttribute(`media`)!==`not all`)&&(n.set(o.dataset.precedence,o),r=o)}r&&n.set(null,r)}i=t.instance,o=i.getAttribute(`data-precedence`),a=n.get(o)||r,a===r&&n.set(null,i),n.set(o,i),this.count++,r=Jf.bind(this),i.addEventListener(`load`,r),i.addEventListener(`error`,r),a?a.parentNode.insertBefore(i,a.nextSibling):(e=e.nodeType===9?e.head:e,e.insertBefore(i,e.firstChild)),t.state.loading|=4}}var Qf={$$typeof:S,Provider:null,Consumer:null,_currentValue:de,_currentValue2:de,_threadCount:0};function $f(e,t,n,r,i,a,o,s,c){this.tag=1,this.containerInfo=e,this.pingCache=this.current=this.pendingChildren=null,this.timeoutHandle=-1,this.callbackNode=this.next=this.pendingContext=this.context=this.cancelPendingCommit=null,this.callbackPriority=0,this.expirationTimes=at(-1),this.entangledLanes=this.shellSuspendCounter=this.errorRecoveryDisabledLanes=this.expiredLanes=this.warmLanes=this.pingedLanes=this.suspendedLanes=this.pendingLanes=0,this.entanglements=at(0),this.hiddenUpdates=at(null),this.identifierPrefix=r,this.onUncaughtError=i,this.onCaughtError=a,this.onRecoverableError=o,this.pooledCache=null,this.pooledCacheLanes=0,this.formState=c,this.incompleteTransitions=new Map}function ep(e,t,n,r,i,a,o,s,c,l,u,d){return e=new $f(e,t,n,o,c,l,u,d,s),t=1,!0===a&&(t|=24),a=hi(3,null,null,t),e.current=a,a.stateNode=e,t=pa(),t.refCount++,e.pooledCache=t,t.refCount++,a.memoizedState={element:r,isDehydrated:n,cache:t},Ka(a),e}function tp(e){return e?(e=pi,e):pi}function np(e,t,n,r,i,a){i=tp(i),r.context===null?r.context=i:r.pendingContext=i,r=Ja(t),r.payload={element:n},a=a===void 0?null:a,a!==null&&(r.callback=a),n=Ya(e,r,t),n!==null&&(hu(n,e,t),Xa(n,e,t))}function rp(e,t){if(e=e.memoizedState,e!==null&&e.dehydrated!==null){var n=e.retryLane;e.retryLane=n!==0&&n<t?n:t}}function ip(e,t){rp(e,t),(e=e.alternate)&&rp(e,t)}function ap(e){if(e.tag===13||e.tag===31){var t=ui(e,67108864);t!==null&&hu(t,e,67108864),ip(e,67108864)}}function op(e){if(e.tag===13||e.tag===31){var t=pu();t=dt(t);var n=ui(e,t);n!==null&&hu(n,e,t),ip(e,t)}}var sp=!0;function cp(e,t,n,r){var i=T.T;T.T=null;var a=E.p;try{E.p=2,up(e,t,n,r)}finally{E.p=a,T.T=i}}function lp(e,t,n,r){var i=T.T;T.T=null;var a=E.p;try{E.p=8,up(e,t,n,r)}finally{E.p=a,T.T=i}}function up(e,t,n,r){if(sp){var i=dp(r);if(i===null)wd(e,t,r,fp,n),Cp(e,r);else if(Tp(i,e,t,n,r))r.stopPropagation();else if(Cp(e,r),t&4&&-1<Sp.indexOf(e)){for(;i!==null;){var a=Tt(i);if(a!==null)switch(a.tag){case 3:if(a=a.stateNode,a.current.memoizedState.isDehydrated){var o=et(a.pendingLanes);if(o!==0){var s=a;for(s.pendingLanes|=2,s.entangledLanes|=2;o;){var c=1<<31-qe(o);s.entanglements[1]|=c,o&=~c}rd(a),!(G&6)&&(tu=Fe()+500,id(0,!1))}}break;case 31:case 13:s=ui(a,2),s!==null&&hu(s,a,2),bu(),ip(a,2)}if(a=dp(r),a===null&&wd(e,t,r,fp,n),a===i)break;i=a}i!==null&&r.stopPropagation()}else wd(e,t,r,null,n)}}function dp(e){return e=un(e),pp(e)}var fp=null;function pp(e){if(fp=null,e=wt(e),e!==null){var t=o(e);if(t===null)e=null;else{var n=t.tag;if(n===13){if(e=s(t),e!==null)return e;e=null}else if(n===31){if(e=c(t),e!==null)return e;e=null}else if(n===3){if(t.stateNode.current.memoizedState.isDehydrated)return t.tag===3?t.stateNode.containerInfo:null;e=null}else t!==e&&(e=null)}}return fp=e,null}function mp(e){switch(e){case`beforetoggle`:case`cancel`:case`click`:case`close`:case`contextmenu`:case`copy`:case`cut`:case`auxclick`:case`dblclick`:case`dragend`:case`dragstart`:case`drop`:case`focusin`:case`focusout`:case`input`:case`invalid`:case`keydown`:case`keypress`:case`keyup`:case`mousedown`:case`mouseup`:case`paste`:case`pause`:case`play`:case`pointercancel`:case`pointerdown`:case`pointerup`:case`ratechange`:case`reset`:case`resize`:case`seeked`:case`submit`:case`toggle`:case`touchcancel`:case`touchend`:case`touchstart`:case`volumechange`:case`change`:case`selectionchange`:case`textInput`:case`compositionstart`:case`compositionend`:case`compositionupdate`:case`beforeblur`:case`afterblur`:case`beforeinput`:case`blur`:case`fullscreenchange`:case`focus`:case`hashchange`:case`popstate`:case`select`:case`selectstart`:return 2;case`drag`:case`dragenter`:case`dragexit`:case`dragleave`:case`dragover`:case`mousemove`:case`mouseout`:case`mouseover`:case`pointermove`:case`pointerout`:case`pointerover`:case`scroll`:case`touchmove`:case`wheel`:case`mouseenter`:case`mouseleave`:case`pointerenter`:case`pointerleave`:return 8;case`message`:switch(Ie()){case Le:return 2;case Re:return 8;case ze:case Be:return 32;case Ve:return 268435456;default:return 32}default:return 32}}var hp=!1,gp=null,_p=null,vp=null,yp=new Map,bp=new Map,xp=[],Sp=`mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput copy cut paste click change contextmenu reset`.split(` `);function Cp(e,t){switch(e){case`focusin`:case`focusout`:gp=null;break;case`dragenter`:case`dragleave`:_p=null;break;case`mouseover`:case`mouseout`:vp=null;break;case`pointerover`:case`pointerout`:yp.delete(t.pointerId);break;case`gotpointercapture`:case`lostpointercapture`:bp.delete(t.pointerId)}}function wp(e,t,n,r,i,a){return e===null||e.nativeEvent!==a?(e={blockedOn:t,domEventName:n,eventSystemFlags:r,nativeEvent:a,targetContainers:[i]},t!==null&&(t=Tt(t),t!==null&&ap(t)),e):(e.eventSystemFlags|=r,t=e.targetContainers,i!==null&&t.indexOf(i)===-1&&t.push(i),e)}function Tp(e,t,n,r,i){switch(t){case`focusin`:return gp=wp(gp,e,t,n,r,i),!0;case`dragenter`:return _p=wp(_p,e,t,n,r,i),!0;case`mouseover`:return vp=wp(vp,e,t,n,r,i),!0;case`pointerover`:var a=i.pointerId;return yp.set(a,wp(yp.get(a)||null,e,t,n,r,i)),!0;case`gotpointercapture`:return a=i.pointerId,bp.set(a,wp(bp.get(a)||null,e,t,n,r,i)),!0}return!1}function Ep(e){var t=wt(e.target);if(t!==null){var n=o(t);if(n!==null){if(t=n.tag,t===13){if(t=s(n),t!==null){e.blockedOn=t,mt(e.priority,function(){op(n)});return}}else if(t===31){if(t=c(n),t!==null){e.blockedOn=t,mt(e.priority,function(){op(n)});return}}else if(t===3&&n.stateNode.current.memoizedState.isDehydrated){e.blockedOn=n.tag===3?n.stateNode.containerInfo:null;return}}}e.blockedOn=null}function Dp(e){if(e.blockedOn!==null)return!1;for(var t=e.targetContainers;0<t.length;){var n=dp(e.nativeEvent);if(n===null){n=e.nativeEvent;var r=new n.constructor(n.type,n);ln=r,n.target.dispatchEvent(r),ln=null}else return t=Tt(n),t!==null&&ap(t),e.blockedOn=n,!1;t.shift()}return!0}function Op(e,t,n){Dp(e)&&n.delete(t)}function kp(){hp=!1,gp!==null&&Dp(gp)&&(gp=null),_p!==null&&Dp(_p)&&(_p=null),vp!==null&&Dp(vp)&&(vp=null),yp.forEach(Op),bp.forEach(Op)}function Ap(e,n){e.blockedOn===n&&(e.blockedOn=null,hp||(hp=!0,t.unstable_scheduleCallback(t.unstable_NormalPriority,kp)))}var jp=null;function Mp(e){jp!==e&&(jp=e,t.unstable_scheduleCallback(t.unstable_NormalPriority,function(){jp===e&&(jp=null);for(var t=0;t<e.length;t+=3){var n=e[t],r=e[t+1],i=e[t+2];if(typeof r!=`function`){if(pp(r||n)===null)continue;break}var a=Tt(n);a!==null&&(e.splice(t,3),t-=3,Ds(a,{pending:!0,data:i,method:n.method,action:r},r,i))}}))}function Np(e){function t(t){return Ap(t,e)}gp!==null&&Ap(gp,e),_p!==null&&Ap(_p,e),vp!==null&&Ap(vp,e),yp.forEach(t),bp.forEach(t);for(var n=0;n<xp.length;n++){var r=xp[n];r.blockedOn===e&&(r.blockedOn=null)}for(;0<xp.length&&(n=xp[0],n.blockedOn===null);)Ep(n),n.blockedOn===null&&xp.shift();if(n=(e.ownerDocument||e).$$reactFormReplay,n!=null)for(r=0;r<n.length;r+=3){var i=n[r],a=n[r+1],o=i[gt]||null;if(typeof a==`function`)o||Mp(n);else if(o){var s=null;if(a&&a.hasAttribute(`formAction`)){if(i=a,o=a[gt]||null)s=o.formAction;else if(pp(i)!==null)continue}else s=o.action;typeof s==`function`?n[r+1]=s:(n.splice(r,3),r-=3),Mp(n)}}}function Pp(){function e(e){e.canIntercept&&e.info===`react-transition`&&e.intercept({handler:function(){return new Promise(function(e){return i=e})},focusReset:`manual`,scroll:`manual`})}function t(){i!==null&&(i(),i=null),r||setTimeout(n,20)}function n(){if(!r&&!navigation.transition){var e=navigation.currentEntry;e&&e.url!=null&&navigation.navigate(e.url,{state:e.getState(),info:`react-transition`,history:`replace`})}}if(typeof navigation==`object`){var r=!1,i=null;return navigation.addEventListener(`navigate`,e),navigation.addEventListener(`navigatesuccess`,t),navigation.addEventListener(`navigateerror`,t),setTimeout(n,100),function(){r=!0,navigation.removeEventListener(`navigate`,e),navigation.removeEventListener(`navigatesuccess`,t),navigation.removeEventListener(`navigateerror`,t),i!==null&&(i(),i=null)}}}function Fp(e){this._internalRoot=e}Ip.prototype.render=Fp.prototype.render=function(e){var t=this._internalRoot;if(t===null)throw Error(i(409));var n=t.current;np(n,pu(),e,t,null,null)},Ip.prototype.unmount=Fp.prototype.unmount=function(){var e=this._internalRoot;if(e!==null){this._internalRoot=null;var t=e.containerInfo;np(e.current,2,null,e,null,null),bu(),t[_t]=null}};function Ip(e){this._internalRoot=e}Ip.prototype.unstable_scheduleHydration=function(e){if(e){var t=pt();e={blockedOn:null,target:e,priority:t};for(var n=0;n<xp.length&&t!==0&&t<xp[n].priority;n++);xp.splice(n,0,e),n===0&&Ep(e)}};var Lp=n.version;if(Lp!==`19.2.8`)throw Error(i(527,Lp,`19.2.8`));E.findDOMNode=function(e){var t=e._reactInternals;if(t===void 0)throw typeof e.render==`function`?Error(i(188)):(e=Object.keys(e).join(`,`),Error(i(268,e)));return e=d(t),e=e===null?null:p(e),e=e===null?null:e.stateNode,e};var Rp={bundleType:0,version:`19.2.8`,rendererPackageName:`react-dom`,currentDispatcherRef:T,reconcilerVersion:`19.2.8`};if(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__<`u`){var zp=__REACT_DEVTOOLS_GLOBAL_HOOK__;if(!zp.isDisabled&&zp.supportsFiber)try{We=zp.inject(Rp),Ge=zp}catch{}}e.createRoot=function(e,t){if(!a(e))throw Error(i(299));var n=!1,r=``,o=Xs,s=Zs,c=Qs;return t!=null&&(!0===t.unstable_strictMode&&(n=!0),t.identifierPrefix!==void 0&&(r=t.identifierPrefix),t.onUncaughtError!==void 0&&(o=t.onUncaughtError),t.onCaughtError!==void 0&&(s=t.onCaughtError),t.onRecoverableError!==void 0&&(c=t.onRecoverableError)),t=ep(e,1,!1,null,null,n,r,null,o,s,c,Pp),e[_t]=t.current,Sd(e),new Fp(t)}})),g=o(((e,t)=>{function n(){if(!(typeof __REACT_DEVTOOLS_GLOBAL_HOOK__>`u`||typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE!=`function`))try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(n)}catch(e){console.error(e)}}n(),t.exports=h()})),_=`modulepreload`,v=function(e){return`/`+e},y={},b=function(e,t,n){let r=Promise.resolve();if(t&&t.length>0){let e=document.getElementsByTagName(`link`),i=document.querySelector(`meta[property=csp-nonce]`),a=i?.nonce||i?.getAttribute(`nonce`);function o(e){return Promise.all(e.map(e=>Promise.resolve(e).then(e=>({status:`fulfilled`,value:e}),e=>({status:`rejected`,reason:e}))))}function s(e){return import.meta.resolve?import.meta.resolve(e):new URL(e,import.meta.url).href}r=o(t.map(t=>{if(t=v(t,n),t=s(t),t in y)return;y[t]=!0;let r=t.endsWith(`.css`);for(let n=e.length-1;n>=0;n--){let i=e[n];if(i.href===t&&(!r||i.rel===`stylesheet`))return}let i=document.createElement(`link`);if(i.rel=r?`stylesheet`:_,r||(i.as=`script`),i.crossOrigin=``,i.href=t,a&&i.setAttribute(`nonce`,a),document.head.appendChild(i),r)return new Promise((e,n)=>{i.addEventListener(`load`,e),i.addEventListener(`error`,()=>n(Error(`Unable to preload CSS for ${t}`)))})}))}function i(e){let t=new Event(`vite:preloadError`,{cancelable:!0});if(t.payload=e,window.dispatchEvent(t),!t.defaultPrevented)throw e}return r.then(t=>{for(let e of t||[])e.status===`rejected`&&i(e.reason);return e().catch(i)})},x=c(u(),1),ee=/^(?:[a-z][a-z0-9+.-]*:|[\\/]{2})/i,S=/^[\\/]{2}/;function C(e,t){return t+e.replace(/\\/g,`/`)}var te=`popstate`;function ne(e){return typeof e==`object`&&!!e&&`pathname`in e&&`search`in e&&`hash`in e&&`state`in e&&`key`in e}function re(e={}){function t(e,t){let{pathname:n=`/`,search:r=``,hash:i=``}=le(e.location.hash.substring(1));return!n.startsWith(`/`)&&!n.startsWith(`.`)&&(n=`/`+n),se(``,{pathname:n,search:r,hash:i},t.state&&t.state.usr||null,t.state&&t.state.key||`default`)}function n(e,t){let n=e.document.querySelector(`base`),r=``;if(n&&n.getAttribute(`href`)){let t=e.location.href,n=t.indexOf(`#`);r=n===-1?t:t.slice(0,n)}return r+`#`+(typeof t==`string`?t:ce(t))}function r(e,t){ie(e.pathname.charAt(0)===`/`,`relative pathnames are not supported in hash history.push(${JSON.stringify(t)})`)}return ue(t,n,r,e)}function w(e,t){if(e===!1||e==null)throw Error(t)}function ie(e,t){if(!e){typeof console<`u`&&console.warn(t);try{throw Error(t)}catch{}}}function ae(){return Math.random().toString(36).substring(2,10)}function oe(e,t){return{usr:e.state,key:e.key,idx:t,masked:e.mask?{pathname:e.pathname,search:e.search,hash:e.hash}:void 0}}function se(e,t,n=null,r,i){return{pathname:typeof e==`string`?e:e.pathname,search:``,hash:``,...typeof t==`string`?le(t):t,state:n,key:t&&t.key||r||ae(),mask:i}}function ce({pathname:e=`/`,search:t=``,hash:n=``}){return t&&t!==`?`&&(e+=t.charAt(0)===`?`?t:`?`+t),n&&n!==`#`&&(e+=n.charAt(0)===`#`?n:`#`+n),e}function le(e){let t={};if(e){let n=e.indexOf(`#`);n>=0&&(t.hash=e.substring(n),e=e.substring(0,n));let r=e.indexOf(`?`);r>=0&&(t.search=e.substring(r),e=e.substring(0,r)),e&&(t.pathname=e)}return t}function ue(e,t,n,r={}){let{window:i=document.defaultView,v5Compat:a=!1}=r,o=i.history,s=`POP`,c=null,l=u();l??(l=0,o.replaceState({...o.state,idx:l},``));function u(){return(o.state||{idx:null}).idx}function d(){s=`POP`;let e=u(),t=e==null?null:e-l;l=e,c&&c({action:s,location:h.location,delta:t})}function f(e,t){s=`PUSH`;let r=ne(e)?e:se(h.location,e,t);n&&n(r,e),l=u()+1;let d=oe(r,l),f=h.createHref(r.mask||r);try{o.pushState(d,``,f)}catch(e){if(e instanceof DOMException&&e.name===`DataCloneError`)throw e;i.location.assign(f)}a&&c&&c({action:s,location:h.location,delta:1})}function p(e,t){s=`REPLACE`;let r=ne(e)?e:se(h.location,e,t);n&&n(r,e),l=u();let i=oe(r,l),d=h.createHref(r.mask||r);o.replaceState(i,``,d),a&&c&&c({action:s,location:h.location,delta:0})}function m(e){return T(i,e)}let h={get action(){return s},get location(){return e(i,o)},listen(e){if(c)throw Error(`A history only accepts one active listener`);return i.addEventListener(te,d),c=e,()=>{i.removeEventListener(te,d),c=null}},createHref(e){return t(i,e)},createURL:m,encodeLocation(e){let t=m(e);return{pathname:t.pathname,search:t.search,hash:t.hash}},push:f,replace:p,go(e){return o.go(e)}};return h}function T(e,t,n=!1){let r=`http://localhost`;e&&(r=e.location.origin===`null`?e.location.href:e.location.origin),w(r,`No window.location.(origin|href) available to create URL`);let i=typeof t==`string`?t:ce(t);return i=i.replace(/ $/,`%20`),!n&&S.test(i)&&(i=r+i),new URL(i,r)}function E(e,t,n=`/`){return de(e,t,n,!1)}function de(e,t,n,r,i){let a=Oe((typeof t==`string`?le(t):t).pathname||`/`,n);if(a==null)return null;let o=i??fe(e),s=null,c=De(a);for(let e=0;s==null&&e<o.length;++e)s=Ce(o[e],c,r);return s}function fe(e){let t=pe(e);return D(t),t}function pe(e,t=[],n=[],r=``,i=!1){let a=(e,a,o=i,s)=>{let c={relativePath:s===void 0?e.path||``:s,caseSensitive:e.caseSensitive===!0,childrenIndex:a,route:e};if(c.relativePath.startsWith(`/`)){if(!c.relativePath.startsWith(r)&&o)return;w(c.relativePath.startsWith(r),`Absolute route path "${c.relativePath}" nested under path "${r}" is not valid. An absolute child route path must start with the combined path of all its parent routes.`),c.relativePath=c.relativePath.slice(r.length)}let l=Ie([r,c.relativePath]),u=n.concat(c);e.children&&e.children.length>0&&(w(e.index!==!0,`Index routes must not have child routes. Please remove all child routes from route path "${l}".`),pe(e.children,t,u,l,o)),!(e.path==null&&!e.index)&&t.push({path:l,score:xe(l,e.index),routesMeta:u.map((e,t)=>{let[n,r]=Ee(e.relativePath,e.caseSensitive,t===u.length-1);return{...e,matcher:n,compiledParams:r}})})};return e.forEach((e,t)=>{if(e.path===``||!e.path?.includes(`?`))a(e,t);else for(let n of me(e.path))a(e,t,!0,n)}),t}function me(e){let t=e.split(`/`);if(t.length===0)return[];let[n,...r]=t,i=n.endsWith(`?`),a=n.replace(/\?$/,``);if(r.length===0)return i?[a,``]:[a];let o=me(r.join(`/`)),s=[];return s.push(...o.map(e=>e===``?a:[a,e].join(`/`))),i&&s.push(...o),s.map(t=>e.startsWith(`/`)&&t===``?`/`:t)}function D(e){e.sort((e,t)=>e.score===t.score?Se(e.routesMeta.map(e=>e.childrenIndex),t.routesMeta.map(e=>e.childrenIndex)):t.score-e.score)}var O=/^:[\w-]+$/,he=3,ge=2,_e=1,ve=10,ye=-2,be=e=>e===`*`;function xe(e,t){let n=e.split(`/`),r=n.length;return n.some(be)&&(r+=ye),t&&(r+=ge),n.filter(e=>!be(e)).reduce((e,t)=>e+(O.test(t)?he:t===``?_e:ve),r)}function Se(e,t){return e.length===t.length&&e.slice(0,-1).every((e,n)=>e===t[n])?e[e.length-1]-t[t.length-1]:0}function Ce(e,t,n=!1){let{routesMeta:r}=e,i={},a=`/`,o=[];for(let e=0;e<r.length;++e){let s=r[e],c=e===r.length-1,l=a===`/`?t:t.slice(a.length)||`/`,u={path:s.relativePath,caseSensitive:s.caseSensitive,end:c},d=s.matcher&&s.compiledParams?Te(u,l,s.matcher,s.compiledParams):we(u,l),f=s.route;if(!d&&c&&n&&!r[r.length-1].route.index&&(d=we({path:s.relativePath,caseSensitive:s.caseSensitive,end:!1},l)),!d)return null;Object.assign(i,d.params),o.push({params:i,pathname:Ie([a,d.pathname]),pathnameBase:Re(Ie([a,d.pathnameBase])),route:f}),d.pathnameBase!==`/`&&(a=Ie([a,d.pathnameBase]))}return o}function we(e,t){typeof e==`string`&&(e={path:e,caseSensitive:!1,end:!0});let[n,r]=Ee(e.path,e.caseSensitive,e.end);return Te(e,t,n,r)}function Te(e,t,n,r){let i=t.match(n);if(!i)return null;let a=i[0],o=a.replace(/(.)\/+$/,`$1`),s=i.slice(1);return{params:r.reduce((e,{paramName:t,isOptional:n},r)=>{if(t===`*`){let e=s[r]||``;o=a.slice(0,a.length-e.length).replace(/(.)\/+$/,`$1`)}let i=s[r];return e[t]=n&&!i?void 0:(i||``).replace(/%2F/g,`/`),e},{}),pathname:a,pathnameBase:o,pattern:e}}function Ee(e,t=!1,n=!0){ie(e===`*`||!e.endsWith(`*`)||e.endsWith(`/*`),`Route path "${e}" will be treated as if it were "${e.replace(/\*$/,`/*`)}" because the \`*\` character must always follow a \`/\` in the pattern. To get rid of this warning, please change the route path to "${e.replace(/\*$/,`/*`)}".`);let r=[],i=`^`+e.replace(/\/*\*?$/,``).replace(/^\/*/,`/`).replace(/[\\.*+^${}|()[\]]/g,`\\$&`).replace(/\/:([\w-]+)(\?)?/g,(e,t,n,i,a)=>{if(r.push({paramName:t,isOptional:n!=null}),n){let t=a.charAt(i+e.length);return t&&t!==`/`?`/([^\\/]*)`:`(?:/([^\\/]*))?`}return`/([^\\/]+)`}).replace(/\/([\w-]+)\?(\/|$)/g,`(/$1)?$2`);return e.endsWith(`*`)?(r.push({paramName:`*`}),i+=e===`*`||e===`/*`?`(.*)$`:`(?:\\/(.+)|\\/*)$`):n?i+=`\\/*$`:e!==``&&e!==`/`&&(i+=`(?:(?=\\/|$))`),[new RegExp(i,t?void 0:`i`),r]}function De(e){try{return e.split(`/`).map(e=>decodeURIComponent(e).replace(/\//g,`%2F`)).join(`/`)}catch(t){return ie(!1,`The URL path "${e}" could not be decoded because it is a malformed URL segment. This is probably due to a bad percent encoding (${t}).`),e}}function Oe(e,t){if(t===`/`)return e;if(!e.toLowerCase().startsWith(t.toLowerCase()))return null;let n=t.endsWith(`/`)?t.length-1:t.length,r=e.charAt(n);return r&&r!==`/`?null:e.slice(n)||`/`}function ke(e,t=`/`){let{pathname:n,search:r=``,hash:i=``}=typeof e==`string`?le(e):e,a;return n?(n=Fe(n),a=n.startsWith(`/`)?Ae(n.substring(1),`/`):Ae(n,t)):a=t,{pathname:a,search:ze(r),hash:Be(i)}}function Ae(e,t){let n=Le(t).split(`/`);return e.split(`/`).forEach(e=>{e===`..`?n.length>1&&n.pop():e!==`.`&&n.push(e)}),n.length>1?n.join(`/`):`/`}function je(e,t,n,r){return`Cannot include a '${e}' character in a manually specified \`to.${t}\` field [${JSON.stringify(r)}].  Please separate it out to the \`to.${n}\` field. Alternatively you may provide the full path as a string in <Link to="..."> and the router will parse it for you.`}function Me(e){return e.filter((e,t)=>t===0||e.route.path&&e.route.path.length>0)}function Ne(e){let t=Me(e);return t.map((e,n)=>n===t.length-1?e.pathname:e.pathnameBase)}function Pe(e,t,n,r=!1){let i;typeof e==`string`?i=le(e):(i={...e},w(!i.pathname||!i.pathname.includes(`?`),je(`?`,`pathname`,`search`,i)),w(!i.pathname||!i.pathname.includes(`#`),je(`#`,`pathname`,`hash`,i)),w(!i.search||!i.search.includes(`#`),je(`#`,`search`,`hash`,i)));let a=e===``||i.pathname===``,o=a?`/`:i.pathname,s;if(o==null)s=n;else{let e=t.length-1;if(!r&&o.startsWith(`..`)){let t=o.split(`/`);for(;t[0]===`..`;)t.shift(),--e;i.pathname=t.join(`/`)}s=e>=0?t[e]:`/`}let c=ke(i,s),l=o&&o!==`/`&&o.endsWith(`/`),u=(a||o===`.`)&&n.endsWith(`/`);return!c.pathname.endsWith(`/`)&&(l||u)&&(c.pathname+=`/`),c}var Fe=e=>e.replace(/[\\/]{2,}/g,`/`),Ie=e=>Fe(e.join(`/`)),Le=e=>e.replace(/\/+$/,``),Re=e=>Le(e).replace(/^\/*/,`/`),ze=e=>!e||e===`?`?``:e.startsWith(`?`)?e:`?`+e,Be=e=>!e||e===`#`?``:e.startsWith(`#`)?e:`#`+e,Ve=class{constructor(e,t,n,r=!1){this.status=e,this.statusText=t||``,this.internal=r,n instanceof Error?(this.data=n.toString(),this.error=n):this.data=n}};function He(e){return e!=null&&typeof e.status==`number`&&typeof e.statusText==`string`&&typeof e.internal==`boolean`&&`data`in e}function Ue(e){return Ie(e.map(e=>e.route.path).filter(Boolean))||`/`}var We=typeof window<`u`&&window.document!==void 0&&window.document.createElement!==void 0;function Ge(e,t){let n=e;if(typeof n!=`string`||!ee.test(n))return{absoluteURL:void 0,isExternal:!1,to:n};let r=n,i=!1;if(We)try{let e=new URL(window.location.href),r=S.test(n)?new URL(C(n,e.protocol)):new URL(n),a=Oe(r.pathname,t);r.origin===e.origin&&a!=null?n=a+r.search+r.hash:i=!0}catch{ie(!1,`<Link to="${n}"> contains an invalid URL which will probably break when clicked - please update to a valid URL path.`)}return{absoluteURL:r,isExternal:i,to:n}}Object.getOwnPropertyNames(Object.prototype).sort().join(`\0`);var Ke=[`POST`,`PUT`,`PATCH`,`DELETE`];new Set(Ke);var qe=[`GET`,...Ke];new Set(qe);var Je=[`about:`,`blob:`,`chrome:`,`chrome-untrusted:`,`content:`,`data:`,`devtools:`,`file:`,`filesystem:`,`javascript:`];function Ye(e){try{return Je.includes(new URL(e).protocol)}catch{return!1}}var Xe=x.createContext(null);Xe.displayName=`DataRouter`;var Ze=x.createContext(null);Ze.displayName=`DataRouterState`;var Qe=x.createContext(!1);function $e(){return x.useContext(Qe)}var et=x.createContext({isTransitioning:!1});et.displayName=`ViewTransition`;var tt=x.createContext(new Map);tt.displayName=`Fetchers`;var nt=x.createContext(null);nt.displayName=`Await`;var rt=x.createContext(null);rt.displayName=`Navigation`;var it=x.createContext(null);it.displayName=`Location`;var at=x.createContext({outlet:null,matches:[],isDataRoute:!1});at.displayName=`Route`;var ot=x.createContext(null);ot.displayName=`RouteError`;var st=`REACT_ROUTER_ERROR`,ct=`REDIRECT`,lt=`ROUTE_ERROR_RESPONSE`;function ut(e){if(e.startsWith(`${st}:${ct}:{`))try{let t=JSON.parse(e.slice(28));if(typeof t==`object`&&t&&typeof t.status==`number`&&typeof t.statusText==`string`&&typeof t.location==`string`&&typeof t.reloadDocument==`boolean`&&typeof t.replace==`boolean`)return t}catch{}}function dt(e){if(e.startsWith(`${st}:${lt}:{`))try{let t=JSON.parse(e.slice(40));if(typeof t==`object`&&t&&typeof t.status==`number`&&typeof t.statusText==`string`)return new Ve(t.status,t.statusText,t.data)}catch{}}function ft(e,{relative:t}={}){w(pt(),`useHref() may be used only in the context of a <Router> component.`);let{basename:n,navigator:r}=x.useContext(rt),{hash:i,pathname:a,search:o}=vt(e,{relative:t}),s=a;return n!==`/`&&(s=a===`/`?n:Ie([n,a])),r.createHref({pathname:s,search:o,hash:i})}function pt(){return x.useContext(it)!=null}function mt(){return w(pt(),`useLocation() may be used only in the context of a <Router> component.`),x.useContext(it).location}var ht=`You should call navigate() in a React.useEffect(), not when your component is first rendered.`;function k(e){x.useContext(rt).static||x.useLayoutEffect(e)}function gt(){let{isDataRoute:e}=x.useContext(at);return e?Pt():_t()}function _t(){w(pt(),`useNavigate() may be used only in the context of a <Router> component.`);let e=x.useContext(Xe),{basename:t,navigator:n}=x.useContext(rt),{matches:r}=x.useContext(at),{pathname:i}=mt(),a=JSON.stringify(Ne(r)),o=x.useRef(!1);return k(()=>{o.current=!0}),x.useCallback((r,s={})=>{if(ie(o.current,ht),!o.current)return;if(typeof r==`number`){n.go(r);return}let c=Pe(r,JSON.parse(a),i,s.relative===`path`);e==null&&t!==`/`&&(c.pathname=c.pathname===`/`?t:Ie([t,c.pathname])),(s.replace?n.replace:n.push)(c,s.state,s)},[t,n,a,i,e])}x.createContext(null);function vt(e,{relative:t}={}){let{matches:n}=x.useContext(at),{pathname:r}=mt(),i=JSON.stringify(Ne(n));return x.useMemo(()=>Pe(e,JSON.parse(i),r,t===`path`),[e,i,r,t])}function yt(e,t){return bt(e,t)}function bt(e,t,n){w(pt(),`useRoutes() may be used only in the context of a <Router> component.`);let{navigator:r}=x.useContext(rt),{matches:i}=x.useContext(at),a=i[i.length-1],o=a?a.params:{},s=a?a.pathname:`/`,c=a?a.pathnameBase:`/`,l=a&&a.route;{let e=l&&l.path||``;It(s,!l||e.endsWith(`*`)||e.endsWith(`*?`),`You rendered descendant <Routes> (or called \`useRoutes()\`) at "${s}" (under <Route path="${e}">) but the parent route path has no trailing "*". This means if you navigate deeper, the parent won't match anymore and therefore the child routes will never render.
 
 Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}/*`}">.`)}let u=mt(),d;if(t){let e=typeof t==`string`?le(t):t;w(c===`/`||e.pathname?.startsWith(c),`When overriding the location using \`<Routes location>\` or \`useRoutes(routes, location)\`, the location pathname must begin with the portion of the URL pathname that was matched by all parent routes. The current pathname base is "${c}" but pathname "${e.pathname}" was given in the \`location\` prop.`),d=e}else d=u;let f=d.pathname||`/`,p=f;if(c!==`/`){let e=c.replace(/^\//,``).split(`/`);p=`/`+f.replace(/^\//,``).split(`/`).slice(e.length).join(`/`)}let m=n&&n.state.matches.length?n.state.matches.map(e=>Object.assign(e,{route:n.manifest[e.route.id]||e.route})):E(e,{pathname:p});ie(l||m!=null,`No routes matched location "${d.pathname}${d.search}${d.hash}" `),ie(m==null||m[m.length-1].route.element!==void 0||m[m.length-1].route.Component!==void 0||m[m.length-1].route.lazy!==void 0,`Matched leaf route at location "${d.pathname}${d.search}${d.hash}" does not have an element or Component. This means it will render an <Outlet /> with a null value by default resulting in an "empty" page.`);let h=Dt(m&&m.map(e=>Object.assign({},e,{params:Object.assign({},o,e.params),pathname:Ie([c,r.encodeLocation?r.encodeLocation(e.pathname.replace(/%/g,`%25`).replace(/\?/g,`%3F`).replace(/#/g,`%23`)).pathname:e.pathname]),pathnameBase:e.pathnameBase===`/`?c:Ie([c,r.encodeLocation?r.encodeLocation(e.pathnameBase.replace(/%/g,`%25`).replace(/\?/g,`%3F`).replace(/#/g,`%23`)).pathname:e.pathnameBase])})),i,n);return t&&h?x.createElement(it.Provider,{value:{location:{pathname:`/`,search:``,hash:``,state:null,key:`default`,mask:void 0,...d},navigationType:`POP`}},h):h}function xt(){let e=Nt(),t=He(e)?`${e.status} ${e.statusText}`:e instanceof Error?e.message:JSON.stringify(e),n=e instanceof Error?e.stack:null,r=`rgba(200,200,200, 0.5)`,i={padding:`0.5rem`,backgroundColor:r},a={padding:`2px 4px`,backgroundColor:r},o=null;return console.error(`Error handled by React Router default ErrorBoundary:`,e),o=x.createElement(x.Fragment,null,x.createElement(`p`,null,`💿 Hey developer 👋`),x.createElement(`p`,null,`You can provide a way better UX than this when your app throws errors by providing your own `,x.createElement(`code`,{style:a},`ErrorBoundary`),` or`,` `,x.createElement(`code`,{style:a},`errorElement`),` prop on your route.`)),x.createElement(x.Fragment,null,x.createElement(`h2`,null,`Unexpected Application Error!`),x.createElement(`h3`,{style:{fontStyle:`italic`}},t),n?x.createElement(`pre`,{style:i},n):null,o)}var St=x.createElement(xt,null),Ct=class extends x.Component{constructor(e){super(e),this.state={location:e.location,revalidation:e.revalidation,error:e.error}}static getDerivedStateFromError(e){return{error:e}}static getDerivedStateFromProps(e,t){return t.location!==e.location||t.revalidation!==`idle`&&e.revalidation===`idle`?{error:e.error,location:e.location,revalidation:e.revalidation}:{error:e.error===void 0?t.error:e.error,location:t.location,revalidation:e.revalidation||t.revalidation}}componentDidCatch(e,t){this.props.onError?this.props.onError(e,t):console.error(`React Router caught the following error during render`,e)}render(){let e=this.state.error;if(this.context&&typeof e==`object`&&e&&`digest`in e&&typeof e.digest==`string`){let t=dt(e.digest);t&&(e=t)}let t=e===void 0?this.props.children:x.createElement(at.Provider,{value:this.props.routeContext},x.createElement(ot.Provider,{value:e,children:this.props.component}));return this.context?x.createElement(Tt,{error:e},t):t}};Ct.contextType=Qe;var wt=new WeakMap;function Tt({children:e,error:t}){let{basename:n}=x.useContext(rt);if(typeof t==`object`&&t&&`digest`in t&&typeof t.digest==`string`){let e=ut(t.digest);if(e){let r=wt.get(t);if(r)throw r;let i=Ge(e.location,n),a=i.absoluteURL||i.to;if(Ye(a))throw Error(`Invalid redirect location`);if(We&&!wt.get(t))if(i.isExternal||e.reloadDocument)window.location.href=a;else{let n=Promise.resolve().then(()=>window.__reactRouterDataRouter.navigate(i.to,{replace:e.replace}));throw wt.set(t,n),n}return x.createElement(`meta`,{httpEquiv:`refresh`,content:`0;url=${a}`})}}return e}function Et({routeContext:e,match:t,children:n}){let r=x.useContext(Xe);return r&&r.static&&r.staticContext&&(t.route.errorElement||t.route.ErrorBoundary)&&(r.staticContext._deepestRenderedBoundaryId=t.route.id),x.createElement(at.Provider,{value:e},n)}function Dt(e,t=[],n){let r=n?.state;if(e==null){if(!r)return null;if(r.errors)e=r.matches;else if(t.length===0&&!r.initialized&&r.matches.length>0)e=r.matches;else return null}let i=e,a=r?.errors;if(a!=null){let e=i.findIndex(e=>e.route.id&&a?.[e.route.id]!==void 0);w(e>=0,`Could not find a matching route for errors on route IDs: ${Object.keys(a).join(`,`)}`),i=i.slice(0,Math.min(i.length,e+1))}let o=!1,s=-1;if(n&&r){o=r.renderFallback;for(let e=0;e<i.length;e++){let t=i[e];if((t.route.HydrateFallback||t.route.hydrateFallbackElement)&&(s=e),t.route.id){let{loaderData:e,errors:a}=r,c=t.route.loader&&!e.hasOwnProperty(t.route.id)&&(!a||a[t.route.id]===void 0);if(t.route.lazy||c){n.isStatic&&(o=!0),i=s>=0?i.slice(0,s+1):[i[0]];break}}}}let c=n?.onError,l=r&&c?(e,t)=>{c(e,{location:r.location,params:r.matches?.[0]?.params??{},pattern:Ue(r.matches),errorInfo:t})}:void 0;return i.reduceRight((e,n,c)=>{let u,d=!1,f=null,p=null;r&&(u=a&&n.route.id?a[n.route.id]:void 0,f=n.route.errorElement||St,o&&(s<0&&c===0?(It(`route-fallback`,!1,"No `HydrateFallback` element provided to render during initial hydration"),d=!0,p=null):s===c&&(d=!0,p=n.route.hydrateFallbackElement||null)));let m=t.concat(i.slice(0,c+1)),h=()=>{let t;return t=u?f:d?p:n.route.Component?x.createElement(n.route.Component,null):n.route.element?n.route.element:e,x.createElement(Et,{match:n,routeContext:{outlet:e,matches:m,isDataRoute:r!=null},children:t})};return r&&(n.route.ErrorBoundary||n.route.errorElement||c===0)?x.createElement(Ct,{location:r.location,revalidation:r.revalidation,component:f,error:u,children:h(),routeContext:{outlet:null,matches:m,isDataRoute:!0},onError:l}):h()},null)}function A(e){return`${e} must be used within a data router.  See https://reactrouter.com/en/main/routers/picking-a-router.`}function Ot(e){let t=x.useContext(Xe);return w(t,A(e)),t}function kt(e){let t=x.useContext(Ze);return w(t,A(e)),t}function At(e){let t=x.useContext(at);return w(t,A(e)),t}function jt(e){let t=At(e),n=t.matches[t.matches.length-1];return w(n.route.id,`${e} can only be used on routes that contain a unique "id"`),n.route.id}function Mt(){return jt(`useRouteId`)}function Nt(){let e=x.useContext(ot),t=kt(`useRouteError`),n=jt(`useRouteError`);return e===void 0?t.errors?.[n]:e}function Pt(){let{router:e}=Ot(`useNavigate`),t=jt(`useNavigate`),n=x.useRef(!1);return k(()=>{n.current=!0}),x.useCallback(async(r,i={})=>{ie(n.current,ht),n.current&&(typeof r==`number`?await e.navigate(r):await e.navigate(r,{fromRouteId:t,...i}))},[e,t])}var Ft={};function It(e,t,n){!t&&!Ft[e]&&(Ft[e]=!0,ie(!1,n))}x.memo(Lt);function Lt({routes:e,manifest:t,future:n,state:r,isStatic:i,onError:a}){return bt(e,void 0,{manifest:t,state:r,isStatic:i,onError:a,future:n})}function Rt(e){w(!1,`A <Route> is only ever to be used as the child of <Routes> element, never rendered directly. Please wrap your <Route> in a <Routes>.`)}function zt({basename:e=`/`,children:t=null,location:n,navigationType:r=`POP`,navigator:i,static:a=!1,useTransitions:o}){w(!pt(),`You cannot render a <Router> inside another <Router>. You should never have more than one in your app.`);let s=e.replace(/^\/*/,`/`),c=x.useMemo(()=>({basename:s,navigator:i,static:a,useTransitions:o,future:{}}),[s,i,a,o]);typeof n==`string`&&(n=le(n));let{pathname:l=`/`,search:u=``,hash:d=``,state:f=null,key:p=`default`,mask:m}=n,h=x.useMemo(()=>{let e=Oe(l,s);return e==null?null:{location:{pathname:e,search:u,hash:d,state:f,key:p,mask:m},navigationType:r}},[s,l,u,d,f,p,r,m]);return ie(h!=null,`<Router basename="${s}"> is not able to match the URL "${l}${u}${d}" because it does not start with the basename, so the <Router> won't render anything.`),h==null?null:x.createElement(rt.Provider,{value:c},x.createElement(it.Provider,{children:t,value:h}))}function Bt({children:e,location:t}){return yt(Vt(e),t)}x.Component;function Vt(e,t=[]){let n=[];return x.Children.forEach(e,(e,r)=>{if(!x.isValidElement(e))return;let i=[...t,r];if(e.type===x.Fragment){n.push.apply(n,Vt(e.props.children,i));return}w(e.type===Rt,`[${typeof e.type==`string`?e.type:e.type.name}] is not a <Route> component. All component children of <Routes> must be a <Route> or <React.Fragment>`),w(!e.props.index||!e.props.children,`An index route cannot have child routes.`);let a={id:e.props.id||i.join(`-`),caseSensitive:e.props.caseSensitive,element:e.props.element,Component:e.props.Component,index:e.props.index,path:e.props.path,middleware:e.props.middleware,loader:e.props.loader,action:e.props.action,hydrateFallbackElement:e.props.hydrateFallbackElement,HydrateFallback:e.props.HydrateFallback,errorElement:e.props.errorElement,ErrorBoundary:e.props.ErrorBoundary,hasErrorBoundary:e.props.hasErrorBoundary===!0||e.props.ErrorBoundary!=null||e.props.errorElement!=null,shouldRevalidate:e.props.shouldRevalidate,handle:e.props.handle,lazy:e.props.lazy};e.props.children&&(a.children=Vt(e.props.children,i)),n.push(a)}),n}var Ht=`get`,Ut=`application/x-www-form-urlencoded`;function Wt(e){return typeof HTMLElement<`u`&&e instanceof HTMLElement}function Gt(e){return Wt(e)&&e.tagName.toLowerCase()===`button`}function Kt(e){return Wt(e)&&e.tagName.toLowerCase()===`form`}function qt(e){return Wt(e)&&e.tagName.toLowerCase()===`input`}function Jt(e){return!!(e.metaKey||e.altKey||e.ctrlKey||e.shiftKey)}function Yt(e,t){return e.button===0&&(!t||t===`_self`)&&!Jt(e)}var Xt=null;function Zt(){if(Xt===null)try{new FormData(document.createElement(`form`),0),Xt=!1}catch{Xt=!0}return Xt}var Qt=new Set([`application/x-www-form-urlencoded`,`multipart/form-data`,`text/plain`]);function $t(e){return e!=null&&!Qt.has(e)?(ie(!1,`"${e}" is not a valid \`encType\` for \`<Form>\`/\`<fetcher.Form>\` and will default to "${Ut}"`),null):e}function en(e,t){let n,r,i,a,o;if(Kt(e)){let o=e.getAttribute(`action`);r=o?Oe(o,t):null,n=e.getAttribute(`method`)||Ht,i=$t(e.getAttribute(`enctype`))||Ut,a=new FormData(e)}else if(Gt(e)||qt(e)&&(e.type===`submit`||e.type===`image`)){let o=e.form;if(o==null)throw Error(`Cannot submit a <button> or <input type="submit"> without a <form>`);let s=e.getAttribute(`formaction`)||o.getAttribute(`action`);if(r=s?Oe(s,t):null,n=e.getAttribute(`formmethod`)||o.getAttribute(`method`)||Ht,i=$t(e.getAttribute(`formenctype`))||$t(o.getAttribute(`enctype`))||Ut,a=new FormData(o,e),!Zt()){let{name:t,type:n,value:r}=e;if(n===`image`){let e=t?`${t}.`:``;a.append(`${e}x`,`0`),a.append(`${e}y`,`0`)}else t&&a.append(t,r)}}else if(Wt(e))throw Error(`Cannot submit element that is not <form>, <button>, or <input type="submit|image">`);else n=Ht,r=null,i=Ut,o=e;return a&&i===`text/plain`&&(o=a,a=void 0),{action:r,method:n.toLowerCase(),encType:i,formData:a,body:o}}Object.getOwnPropertyNames(Object.prototype).sort().join(`\0`);function tn(e,t){if(e===!1||e==null)throw Error(t)}function nn(e,t,n,r){let i=typeof e==`string`?new URL(e,typeof window>`u`?`server://singlefetch/`:window.location.origin):e;return i.pathname=n?i.pathname.endsWith(`/`)?`${i.pathname}_.${r}`:`${i.pathname}.${r}`:i.pathname===`/`?`_root.${r}`:t&&Oe(i.pathname,t)===`/`?`${Le(t)}/_root.${r}`:`${Le(i.pathname)}.${r}`,i}async function rn(e,t){if(e.id in t)return t[e.id];try{let n=await b(()=>import(e.module),[]);return t[e.id]=n,n}catch(t){return console.error(`Error loading route module \`${e.module}\`, reloading page...`),console.error(t),window.__reactRouterContext&&window.__reactRouterContext.isSpaMode,window.location.reload(),new Promise(()=>{})}}function an(e){return e!=null&&typeof e.page==`string`}function on(e){return e==null?!1:e.href==null?e.rel===`preload`&&typeof e.imageSrcSet==`string`&&typeof e.imageSizes==`string`:typeof e.rel==`string`&&typeof e.href==`string`}async function sn(e,t,n){return fn((await Promise.all(e.map(async e=>{let r=t.routes[e.route.id];if(r){let e=await rn(r,n);return e.links?e.links():[]}return[]}))).flat(1).filter(on).filter(e=>e.rel===`stylesheet`||e.rel===`preload`).map(e=>e.rel===`stylesheet`?{...e,rel:`prefetch`,as:`style`}:{...e,rel:`prefetch`}))}function cn(e,t,n,r,i,a){let o=(e,t)=>!n[t]||e.route.id!==n[t].route.id,s=(e,t)=>n[t].pathname!==e.pathname||n[t].route.path?.endsWith(`*`)&&n[t].params[`*`]!==e.params[`*`];return a===`assets`?t.filter((e,t)=>o(e,t)||s(e,t)):a===`data`?t.filter((t,a)=>{let c=r.routes[t.route.id];if(!c||!c.hasLoader)return!1;if(o(t,a)||s(t,a))return!0;if(t.route.shouldRevalidate){let r=t.route.shouldRevalidate({currentUrl:new URL(i.pathname+i.search+i.hash,window.origin),currentParams:n[0]?.params||{},nextUrl:new URL(e,window.origin),nextParams:t.params,defaultShouldRevalidate:!0});if(typeof r==`boolean`)return r}return!0}):[]}function ln(e,t,{includeHydrateFallback:n}={}){return un(e.map(e=>{let r=t.routes[e.route.id];if(!r)return[];let i=[r.module];return r.clientActionModule&&(i=i.concat(r.clientActionModule)),r.clientLoaderModule&&(i=i.concat(r.clientLoaderModule)),n&&r.hydrateFallbackModule&&(i=i.concat(r.hydrateFallbackModule)),r.imports&&(i=i.concat(r.imports)),i}).flat(1))}function un(e){return[...new Set(e)]}function dn(e){let t={},n=Object.keys(e).sort();for(let r of n)t[r]=e[r];return t}function fn(e,t){let n=new Set,r=new Set(t);return e.reduce((e,i)=>{if(t&&!an(i)&&i.as===`script`&&i.href&&r.has(i.href))return e;let a=JSON.stringify(dn(i));return n.has(a)||(n.add(a),e.push({key:a,link:i})),e},[])}function pn(){let e=x.useContext(Xe);return tn(e,`You must render this element inside a <DataRouterContext.Provider> element`),e}function mn(){let e=x.useContext(Ze);return tn(e,`You must render this element inside a <DataRouterStateContext.Provider> element`),e}var hn=x.createContext(void 0);hn.displayName=`FrameworkContext`;function gn(){let e=x.useContext(hn);return tn(e,`You must render this element inside a <HydratedRouter> element`),e}function _n(e,t){let n=x.useContext(hn),[r,i]=x.useState(!1),[a,o]=x.useState(!1),{onFocus:s,onBlur:c,onMouseEnter:l,onMouseLeave:u,onTouchStart:d}=t,f=x.useRef(null);x.useEffect(()=>{if(e===`render`&&o(!0),e===`viewport`){let e=new IntersectionObserver(e=>{e.forEach(e=>{o(e.isIntersecting)})},{threshold:.5});return f.current&&e.observe(f.current),()=>{e.disconnect()}}},[e]),x.useEffect(()=>{if(r){let e=setTimeout(()=>{o(!0)},100);return()=>{clearTimeout(e)}}},[r]);let p=()=>{i(!0)},m=()=>{i(!1),o(!1)};return n?e===`intent`?[a,f,{onFocus:vn(s,p),onBlur:vn(c,m),onMouseEnter:vn(l,p),onMouseLeave:vn(u,m),onTouchStart:vn(d,p)}]:[a,f,{}]:[!1,f,{}]}function vn(e,t){return n=>{e&&e(n),n.defaultPrevented||t(n)}}function yn({page:e,...t}){let n=$e(),{nonce:r}=gn(),{router:i}=pn(),a=x.useMemo(()=>E(i.routes,e,i.basename),[i.routes,e,i.basename]);return a?(t.nonce==null&&r&&(t={...t,nonce:r}),n?x.createElement(xn,{page:e,matches:a,...t}):x.createElement(Sn,{page:e,matches:a,...t})):null}function bn(e){let{manifest:t,routeModules:n}=gn(),[r,i]=x.useState([]);return x.useEffect(()=>{let r=!1;return sn(e,t,n).then(e=>{r||i(e)}),()=>{r=!0}},[e,t,n]),r}function xn({page:e,matches:t,...n}){let r=mt(),{future:i}=gn(),{basename:a}=pn(),o=x.useMemo(()=>{if(e===r.pathname+r.search+r.hash)return[];let n=nn(e,a,i.v8_trailingSlashAwareDataRequests,`rsc`),o=!1,s=[];for(let e of t)typeof e.route.shouldRevalidate==`function`?o=!0:s.push(e.route.id);return o&&s.length>0&&n.searchParams.set(`_routes`,s.join(`,`)),[n.pathname+n.search]},[a,i.v8_trailingSlashAwareDataRequests,e,r,t]);return x.createElement(x.Fragment,null,o.map(e=>x.createElement(`link`,{key:e,rel:`prefetch`,as:`fetch`,href:e,...n})))}function Sn({page:e,matches:t,...n}){let r=mt(),{future:i,manifest:a,routeModules:o}=gn(),{basename:s}=pn(),{loaderData:c,matches:l}=mn(),u=x.useMemo(()=>cn(e,t,l,a,r,`data`),[e,t,l,a,r]),d=x.useMemo(()=>cn(e,t,l,a,r,`assets`),[e,t,l,a,r]),f=x.useMemo(()=>{if(e===r.pathname+r.search+r.hash)return[];let n=new Set,l=!1;if(t.forEach(e=>{let t=a.routes[e.route.id];!t||!t.hasLoader||(!u.some(t=>t.route.id===e.route.id)&&e.route.id in c&&o[e.route.id]?.shouldRevalidate||t.hasClientLoader?l=!0:n.add(e.route.id))}),n.size===0)return[];let d=nn(e,s,i.v8_trailingSlashAwareDataRequests,`data`);return l&&n.size>0&&d.searchParams.set(`_routes`,t.filter(e=>n.has(e.route.id)).map(e=>e.route.id).join(`,`)),[d.pathname+d.search]},[s,i.v8_trailingSlashAwareDataRequests,c,r,a,u,t,e,o]),p=x.useMemo(()=>ln(d,a),[d,a]),m=bn(d);return x.createElement(x.Fragment,null,f.map(e=>x.createElement(`link`,{key:e,rel:`prefetch`,as:`fetch`,href:e,...n})),p.map(e=>x.createElement(`link`,{key:e,rel:`modulepreload`,href:e,...n})),m.map(({key:e,link:t})=>x.createElement(`link`,{key:e,nonce:n.nonce,...t,crossOrigin:t.crossOrigin??n.crossOrigin})))}function Cn(...e){return t=>{e.forEach(e=>{typeof e==`function`?e(t):e!=null&&(e.current=t)})}}x.Component;var wn=typeof window<`u`&&window.document!==void 0&&window.document.createElement!==void 0;try{wn&&(window.__reactRouterVersion=`7.18.2`)}catch{}function Tn({basename:e,children:t,useTransitions:n,window:r}){let i=x.useRef();i.current??=re({window:r,v5Compat:!0});let a=i.current,[o,s]=x.useState({action:a.action,location:a.location}),c=x.useCallback(e=>{n===!1?s(e):x.startTransition(()=>s(e))},[n]);return x.useLayoutEffect(()=>a.listen(c),[a,c]),x.createElement(zt,{basename:e,children:t,location:o.location,navigationType:o.action,navigator:a,useTransitions:n})}var En=x.forwardRef(function({onClick:e,discover:t=`render`,prefetch:n=`none`,relative:r,reloadDocument:i,replace:a,mask:o,state:s,target:c,to:l,preventScrollReset:u,viewTransition:d,defaultShouldRevalidate:f,...p},m){let{basename:h,navigator:g,useTransitions:_}=x.useContext(rt),v=typeof l==`string`&&ee.test(l),y=Ge(l,h);l=y.to;let b=ft(l,{relative:r}),S=mt(),C=null;if(o){let e=Pe(o,[],S.mask?S.mask.pathname:`/`,!0);h!==`/`&&(e.pathname=e.pathname===`/`?h:Ie([h,e.pathname])),C=g.createHref(e)}let[te,ne,re]=_n(n,p),w=jn(l,{replace:a,mask:o,state:s,target:c,preventScrollReset:u,relative:r,viewTransition:d,defaultShouldRevalidate:f,useTransitions:_});function ie(t){e&&e(t),t.defaultPrevented||w(t)}let ae=!(y.isExternal||i),oe=x.createElement(`a`,{...p,...re,href:(ae?C:void 0)||y.absoluteURL||b,onClick:ae?ie:e,ref:Cn(m,ne),target:c,"data-discover":!v&&t===`render`?`true`:void 0});return te&&!v?x.createElement(x.Fragment,null,oe,x.createElement(yn,{page:b})):oe});En.displayName=`Link`;var Dn=x.forwardRef(function({"aria-current":e=`page`,caseSensitive:t=!1,className:n=``,end:r=!1,style:i,to:a,viewTransition:o,children:s,...c},l){let u=vt(a,{relative:c.relative}),d=mt(),f=x.useContext(Ze),{navigator:p,basename:m}=x.useContext(rt),h=f!=null&&In(u)&&o===!0,g=p.encodeLocation?p.encodeLocation(u).pathname:u.pathname,_=d.pathname,v=f&&f.navigation&&f.navigation.location?f.navigation.location.pathname:null;t||(_=_.toLowerCase(),v=v?v.toLowerCase():null,g=g.toLowerCase()),v&&m&&(v=Oe(v,m)||v);let y=g!==`/`&&g.endsWith(`/`)?g.length-1:g.length,b=_===g||!r&&_.startsWith(g)&&_.charAt(y)===`/`,ee=v!=null&&(v===g||!r&&v.startsWith(g)&&v.charAt(g.length)===`/`),S={isActive:b,isPending:ee,isTransitioning:h},C=b?e:void 0,te;te=typeof n==`function`?n(S):[n,b?`active`:null,ee?`pending`:null,h?`transitioning`:null].filter(Boolean).join(` `);let ne=typeof i==`function`?i(S):i;return x.createElement(En,{...c,"aria-current":C,className:te,ref:l,style:ne,to:a,viewTransition:o},typeof s==`function`?s(S):s)});Dn.displayName=`NavLink`;var On=x.forwardRef(({discover:e=`render`,fetcherKey:t,navigate:n,reloadDocument:r,replace:i,state:a,method:o=Ht,action:s,onSubmit:c,relative:l,preventScrollReset:u,viewTransition:d,defaultShouldRevalidate:f,...p},m)=>{let{useTransitions:h}=x.useContext(rt),g=Pn(),_=Fn(s,{relative:l}),v=o.toLowerCase()===`get`?`get`:`post`,y=typeof s==`string`&&ee.test(s);return x.createElement(`form`,{ref:m,method:v,action:_,onSubmit:r?c:e=>{if(c&&c(e),e.defaultPrevented)return;e.preventDefault();let r=e.nativeEvent.submitter,s=r?.getAttribute(`formmethod`)||o,p=()=>g(r||e.currentTarget,{fetcherKey:t,method:s,navigate:n,replace:i,state:a,relative:l,preventScrollReset:u,viewTransition:d,defaultShouldRevalidate:f});h&&n!==!1?x.startTransition(()=>p()):p()},...p,"data-discover":!y&&e===`render`?`true`:void 0})});On.displayName=`Form`;function kn(e){return`${e} must be used within a data router.  See https://reactrouter.com/en/main/routers/picking-a-router.`}function An(e){let t=x.useContext(Xe);return w(t,kn(e)),t}function jn(e,{target:t,replace:n,mask:r,state:i,preventScrollReset:a,relative:o,viewTransition:s,defaultShouldRevalidate:c,useTransitions:l}={}){let u=gt(),d=mt(),f=vt(e,{relative:o});return x.useCallback(p=>{if(Yt(p,t)){p.preventDefault();let t=n===void 0?ce(d)===ce(f):n,m=()=>u(e,{replace:t,mask:r,state:i,preventScrollReset:a,relative:o,viewTransition:s,defaultShouldRevalidate:c});l?x.startTransition(()=>m()):m()}},[d,u,f,n,r,i,t,e,a,o,s,c,l])}var Mn=0,Nn=()=>`__${String(++Mn)}__`;function Pn(){let{router:e}=An(`useSubmit`),{basename:t}=x.useContext(rt),n=Mt(),r=e.fetch,i=e.navigate;return x.useCallback(async(e,a={})=>{let{action:o,method:s,encType:c,formData:l,body:u}=en(e,t);if(a.navigate===!1){let e=a.fetcherKey||Nn();await r(e,n,a.action||o,{defaultShouldRevalidate:a.defaultShouldRevalidate,preventScrollReset:a.preventScrollReset,formData:l,body:u,formMethod:a.method||s,formEncType:a.encType||c,flushSync:a.flushSync})}else await i(a.action||o,{defaultShouldRevalidate:a.defaultShouldRevalidate,preventScrollReset:a.preventScrollReset,formData:l,body:u,formMethod:a.method||s,formEncType:a.encType||c,replace:a.replace,state:a.state,fromRouteId:n,flushSync:a.flushSync,viewTransition:a.viewTransition})},[r,i,t,n])}function Fn(e,{relative:t}={}){let{basename:n}=x.useContext(rt),r=x.useContext(at);w(r,`useFormAction must be used inside a RouteContext`);let[i]=r.matches.slice(-1),a={...vt(e||`.`,{relative:t})},o=mt();if(e==null){a.search=o.search;let e=new URLSearchParams(a.search),t=e.getAll(`index`);if(t.some(e=>e===``)){e.delete(`index`),t.filter(e=>e).forEach(t=>e.append(`index`,t));let n=e.toString();a.search=n?`?${n}`:``}}return(!e||e===`.`)&&i.route.index&&(a.search=a.search?a.search.replace(/^\?/,`?index&`):`?index`),n!==`/`&&(a.pathname=a.pathname===`/`?n:Ie([n,a.pathname])),ce(a)}function In(e,{relative:t}={}){let n=x.useContext(et);w(n!=null,"`useViewTransitionState` must be used within `react-router-dom`'s `RouterProvider`.  Did you accidentally import `RouterProvider` from `react-router`?");let{basename:r}=An(`useViewTransitionState`),i=vt(e,{relative:t});if(!n.isTransitioning)return!1;let a=Oe(n.currentLocation.pathname,r)||n.currentLocation.pathname,o=Oe(n.nextLocation.pathname,r)||n.nextLocation.pathname;return we(i.pathname,o)!=null||we(i.pathname,a)!=null}var Ln=o((e=>{var t=Symbol.for(`react.transitional.element`);function n(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.jsx=n,e.jsxs=n})),Rn=o(((e,t)=>{t.exports=Ln()})),zn=g(),j=Rn();function Bn(){let e=mt().pathname===`/`;return(0,j.jsxs)(`div`,{className:`app`,children:[(0,j.jsx)(`style`,{children:`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          background: #f8f8f6; color: #111827; line-height: 1.6; -webkit-font-smoothing: antialiased;
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+          background: #f4f2ed;
+          color: #1a1a1a;
+          line-height: 1.6;
+          -webkit-font-smoothing: antialiased;
         }
-        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
-
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(24px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Sidebar */
-        .sidebar {
-          position: fixed; left: 0; top: 0; width: 300px; height: 100vh;
-          background: #ffffff; border-right: 1px solid #e5e7eb;
-          display: flex; flex-direction: column; padding: 48px 32px; z-index: 50;
-        }
-        .sidebar-brand { margin-bottom: 48px; }
-        .avatar {
-          width: 80px; height: 80px; border-radius: 50%;
-          background: linear-gradient(135deg, #2d9c6c, #1b5e3e);
-          color: #fff; display: flex; align-items: center; justify-content: center;
-          font-size: 2rem; font-weight: 700; margin-bottom: 16px;
-          box-shadow: 0 4px 16px rgba(45,156,108,0.25);
-        }
-        .sidebar-brand h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; color: #111827; }
-        .sidebar-brand p { font-size: 0.875rem; color: #6b7280; margin-top: 6px; }
-        .sidebar-nav { display: flex; flex-direction: column; gap: 8px; flex: 1; }
-        .sidebar-nav a {
-          display: flex; align-items: center; gap: 12px;
-          padding: 10px 16px; border-radius: 10px; color: #4b5563;
-          text-decoration: none; font-size: 0.95rem; font-weight: 500;
-          transition: all 0.2s ease;
-        }
-        .sidebar-nav a:hover { background: #f5faf8; color: #2d9c6c; }
-        .sidebar-nav a.active { background: #f0fdf4; color: #15803d; font-weight: 600; }
-        .sidebar-social {
-          display: flex; gap: 12px; margin-top: auto; padding-top: 24px; border-top: 1px solid #e5e7eb;
-        }
-        .sidebar-social a {
-          width: 40px; height: 40px; border-radius: 10px; border: 1px solid #e5e7eb;
-          display: flex; align-items: center; justify-content: center;
-          color: #6b7280; text-decoration: none; font-size: 0.9rem; transition: all 0.2s;
-        }
-        .sidebar-social a:hover { border-color: #2d9c6c; color: #2d9c6c; background: #f0fdf4; }
-
-        /* Main */
-        .main { margin-left: 300px; min-height: 100vh; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 40px; }
-
-        /* Hero */
-        .hero-section { min-height: 100vh; display: flex; align-items: center; animation: fadeUp 0.8s ease both; }
-        .hero-badge {
-          display: inline-flex; align-items: center; gap: 8px;
-          background: #f0fdf4; color: #15803d; padding: 6px 16px;
-          border-radius: 100px; font-size: 0.8rem; font-weight: 600; margin-bottom: 24px; letter-spacing: 0.02em;
-        }
-        .hero-badge::before { content: ''; width: 8px; height: 8px; background: #2d9c6c; border-radius: 50%; }
-        .hero-section h1 {
-          font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 800; line-height: 1.08;
-          letter-spacing: -0.03em; margin-bottom: 20px; color: #111827;
-        }
-        .hero-section h1 span { color: #2d9c6c; }
-        .hero-desc { font-size: 1.125rem; color: #4b5563; max-width: 540px; line-height: 1.8; margin-bottom: 32px; }
-        .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-        .btn {
-          display: inline-flex; align-items: center; gap: 8px;
-          padding: 12px 28px; border-radius: 10px; font-weight: 600;
-          text-decoration: none; transition: all 0.25s; border: none; cursor: pointer; font-size: 0.95rem;
-        }
-        .btn-primary { background: #2d9c6c; color: #fff; box-shadow: 0 4px 14px rgba(45,156,108,0.3); }
-        .btn-primary:hover { background: #248f61; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(45,156,108,0.35); }
-        .btn-outline { background: transparent; color: #374151; border: 1px solid #d1d5db; }
-        .btn-outline:hover { border-color: #2d9c6c; color: #2d9c6c; background: #f0fdf4; }
-
-        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 64px; padding-top: 40px; border-top: 1px solid #e5e7eb; }
-        .stat-item { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 24px; text-align: center; transition: all 0.3s; }
-        .stat-item:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.06); border-color: #d1d5db; }
-        .stat-item h3 { font-size: 2rem; font-weight: 800; color: #2d9c6c; letter-spacing: -0.02em; margin-bottom: 6px; }
-        .stat-item p { font-size: 0.875rem; color: #6b7280; font-weight: 500; }
-
-        /* Section */
-        .section { padding: 80px 0; animation: fadeUp 0.8s ease both; }
-        .section-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 32px; display: flex; align-items: center; gap: 12px; color: #111827; text-transform: uppercase; letter-spacing: 0.05em; }
-        .section-title::after { content: ''; flex: 1; height: 1px; background: #e5e7eb; }
-
-        .about-text { color: #374151; line-height: 1.9; font-size: 1.05rem; margin-bottom: 24px; }
-        .about-text strong { color: #111827; font-weight: 600; }
-        .about-highlights { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 32px; }
-        .highlight-box {
-          background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 28px;
-          transition: all 0.3s;
-        }
-        .highlight-box:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.06); border-color: #d1d5db; }
-        .highlight-box .icon { font-size: 1.75rem; margin-bottom: 12px; }
-        .highlight-box h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: #111827; }
-        .highlight-box p { font-size: 0.875rem; color: #6b7280; line-height: 1.6; }
-
-        .skill-cloud { display: flex; flex-wrap: wrap; gap: 10px; }
-        .tag {
-          display: inline-block; padding: 6px 16px; background: #fff; color: #374151;
-          border-radius: 8px; font-size: 0.85rem; font-weight: 500; transition: all 0.2s;
-          border: 1px solid #e5e7eb;
-        }
-        .tag:hover { background: #f0fdf4; color: #15803d; border-color: #2d9c6c; transform: translateY(-1px); }
-
-        .footer { text-align: center; padding: 40px; color: #9ca3af; font-size: 0.875rem; border-top: 1px solid #e5e7eb; margin-top: 20px; }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-          .sidebar { display: none; }
-          .main { margin-left: 0; }
-          .stats { grid-template-columns: repeat(2, 1fr); }
-          .about-highlights { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 640px) {
-          .container { padding: 0 24px; }
-          .stats { grid-template-columns: 1fr 1fr; gap: 12px; }
-          .hero-section { min-height: auto; padding: 60px 0; }
-          .stat-item { padding: 16px; }
-        }
-      `}),(0,j.jsxs)(`aside`,{className:`sidebar`,children:[(0,j.jsxs)(`div`,{className:`sidebar-brand`,children:[(0,j.jsx)(`div`,{className:`avatar`,children:`梅`}),(0,j.jsx)(`h1`,{children:`梅冉`}),(0,j.jsx)(`p`,{children:`AI 产品经理 · 计算机科学`})]}),(0,j.jsxs)(`nav`,{className:`sidebar-nav`,children:[(0,j.jsx)(En,{to:`/`,className:e?`active`:``,children:`🏠 首页概览`}),(0,j.jsx)(En,{to:`/other`,className:e?``:`active`,children:`📋 详细履历`}),(0,j.jsx)(`a`,{href:`https://github.com/Kyan-Shida`,target:`_blank`,rel:`noreferrer`,children:`💻 GitHub`})]}),(0,j.jsxs)(`div`,{className:`sidebar-social`,children:[(0,j.jsx)(`a`,{href:`mailto:2957837612@qq.com`,title:`邮箱`,children:`✉️`}),(0,j.jsx)(`a`,{href:`tel:18726622320`,title:`电话`,children:`📞`})]})]}),(0,j.jsxs)(`main`,{className:`main`,children:[(0,j.jsx)(`section`,{className:`hero-section`,children:(0,j.jsxs)(`div`,{className:`container`,children:[(0,j.jsx)(`div`,{className:`hero-badge`,children:`AI 产品经理 · 全栈思维`}),(0,j.jsxs)(`h1`,{children:[`你好，我是 `,(0,j.jsx)(`span`,{children:`梅冉`}),(0,j.jsx)(`br`,{}),`用产品思维探索 AI 边界`]}),(0,j.jsx)(`p`,{className:`hero-desc`,children:`计算机专业背景，独立负责过 AI 产品从 0 到 1 的落地。 擅长用户洞察、数据分析与商业场景设计，懂技术的产品人， 追求优雅与增长。`}),(0,j.jsxs)(`div`,{className:`hero-actions`,children:[(0,j.jsx)(En,{to:`/other`,className:`btn btn-primary`,children:`查看详细履历 →`}),(0,j.jsx)(`a`,{href:`https://github.com/Kyan-Shida`,target:`_blank`,rel:`noreferrer`,className:`btn btn-outline`,children:`GitHub`})]}),(0,j.jsxs)(`div`,{className:`stats`,children:[(0,j.jsxs)(`div`,{className:`stat-item`,children:[(0,j.jsx)(`h3`,{children:`300+`}),(0,j.jsx)(`p`,{children:`有效问卷回收`})]}),(0,j.jsxs)(`div`,{className:`stat-item`,children:[(0,j.jsx)(`h3`,{children:`50%`}),(0,j.jsx)(`p`,{children:`效率提升`})]}),(0,j.jsxs)(`div`,{className:`stat-item`,children:[(0,j.jsx)(`h3`,{children:`+28%`}),(0,j.jsx)(`p`,{children:`ARPU 增长`})]}),(0,j.jsxs)(`div`,{className:`stat-item`,children:[(0,j.jsx)(`h3`,{children:`2`}),(0,j.jsx)(`p`,{children:`AI 项目落地`})]})]})]})}),(0,j.jsx)(`section`,{className:`section`,children:(0,j.jsxs)(`div`,{className:`container`,children:[(0,j.jsx)(`h2`,{className:`section-title`,children:`关于我`}),(0,j.jsxs)(`p`,{className:`about-text`,children:[`我是 `,(0,j.jsx)(`strong`,{children:`梅冉`}),`，就读于`,(0,j.jsx)(`strong`,{children:`安徽科技工程大学`}),`计算机科学与技术专业（2022 – 2026）。 在校期间获得校三等奖学金、省级创新创业铜奖、校 ACM 铜奖。 拥有两段产品实习经历，深度参与过 `,(0,j.jsx)(`strong`,{children:`AI 健康管家`}),` 和 `,(0,j.jsx)(`strong`,{children:`AI 文库`}),` 两个从 0 到 1 的产品。`]}),(0,j.jsxs)(`p`,{className:`about-text`,children:[`我坚信 `,(0,j.jsx)(`strong`,{children:`数据驱动决策`}),`，擅长用 A/B 实验验证假设， 熟练使用 Axure、SQL、Python 及 Prompt 工程，能快速搭建 MVP 并推动上线迭代。`]}),(0,j.jsxs)(`div`,{className:`about-highlights`,children:[(0,j.jsxs)(`div`,{className:`highlight-box`,children:[(0,j.jsx)(`div`,{className:`icon`,children:`🧠`}),(0,j.jsx)(`h4`,{children:`产品思维`}),(0,j.jsx)(`p`,{children:`计算机 + 产品复合背景，从用户价值到商业目标全链路思考`})]}),(0,j.jsxs)(`div`,{className:`highlight-box`,children:[(0,j.jsx)(`div`,{className:`icon`,children:`📊`}),(0,j.jsx)(`h4`,{children:`数据敏感`}),(0,j.jsx)(`p`,{children:`主导 6 次 A/B 实验，3 次方案落地，LTV 提升 20%+`})]}),(0,j.jsxs)(`div`,{className:`highlight-box`,children:[(0,j.jsx)(`div`,{className:`icon`,children:`🤖`}),(0,j.jsx)(`h4`,{children:`AI 落地`}),(0,j.jsx)(`p`,{children:`从大模型选型到 RAG 搭建，将 AI 能力转化为真实产品功能`})]})]}),(0,j.jsx)(`h3`,{style:{fontSize:`1rem`,fontWeight:600,marginBottom:16,color:`#374151`},children:`核心技术栈`}),(0,j.jsxs)(`div`,{className:`skill-cloud`,children:[(0,j.jsx)(`span`,{className:`tag`,children:`Axure RP`}),(0,j.jsx)(`span`,{className:`tag`,children:`SQL`}),(0,j.jsx)(`span`,{className:`tag`,children:`Python`}),(0,j.jsx)(`span`,{className:`tag`,children:`Prompt 工程`}),(0,j.jsx)(`span`,{className:`tag`,children:`Visio`}),(0,j.jsx)(`span`,{className:`tag`,children:`XMind`}),(0,j.jsx)(`span`,{className:`tag`,children:`数据分析`}),(0,j.jsx)(`span`,{className:`tag`,children:`A/B 实验`}),(0,j.jsx)(`span`,{className:`tag`,children:`RAG`}),(0,j.jsx)(`span`,{className:`tag`,children:`Dify`}),(0,j.jsx)(`span`,{className:`tag`,children:`Figma`})]})]})}),(0,j.jsx)(`div`,{className:`footer`,children:`© 2026 梅冉 · 用产品思维探索 AI 边界`})]})]})}function Vn(){let e=mt().pathname===`/`;return(0,j.jsxs)(`div`,{className:`app`,children:[(0,j.jsx)(`style`,{children:`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          background: #f8f8f6; color: #111827; line-height: 1.6; -webkit-font-smoothing: antialiased;
-        }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: #c4c0b5; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8a8275; }
 
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Sidebar */
-        .sidebar {
-          position: fixed; left: 0; top: 0; width: 300px; height: 100vh;
-          background: #ffffff; border-right: 1px solid #e5e7eb;
-          display: flex; flex-direction: column; padding: 48px 32px; z-index: 50;
+        /* Top nav */
+        .topnav {
+          position: fixed; top: 0; left: 0; right: 0;
+          display: flex; justify-content: space-between; align-items: center;
+          padding: 22px 40px;
+          background: rgba(244, 242, 237, 0.85);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          border-bottom: 1px solid rgba(0,0,0,0.08);
+          z-index: 50;
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.78rem;
         }
-        .sidebar-brand { margin-bottom: 48px; }
-        .avatar {
-          width: 80px; height: 80px; border-radius: 50%;
-          background: linear-gradient(135deg, #2d9c6c, #1b5e3e);
-          color: #fff; display: flex; align-items: center; justify-content: center;
-          font-size: 2rem; font-weight: 700; margin-bottom: 16px;
-          box-shadow: 0 4px 16px rgba(45,156,108,0.25);
+        .topnav-brand {
+          font-weight: 500; letter-spacing: -0.01em; text-decoration: none; color: #1a1a1a;
+          display: flex; align-items: center; gap: 8px;
         }
-        .sidebar-brand h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; color: #111827; }
-        .sidebar-brand p { font-size: 0.875rem; color: #6b7280; margin-top: 6px; }
-        .sidebar-nav { display: flex; flex-direction: column; gap: 8px; flex: 1; }
-        .sidebar-nav a {
-          display: flex; align-items: center; gap: 12px;
-          padding: 10px 16px; border-radius: 10px; color: #4b5563;
-          text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: all 0.2s;
+        .topnav-brand .star { color: #8a8275; }
+        .topnav-links { display: flex; gap: 28px; align-items: center; }
+        .topnav-links a {
+          color: #6a6a6a; text-decoration: none; transition: color 0.2s;
+          text-transform: lowercase; letter-spacing: 0.02em;
         }
-        .sidebar-nav a:hover { background: #f5faf8; color: #2d9c6c; }
-        .sidebar-nav a.active { background: #f0fdf4; color: #15803d; font-weight: 600; }
-        .sidebar-social {
-          display: flex; gap: 12px; margin-top: auto; padding-top: 24px; border-top: 1px solid #e5e7eb;
+        .topnav-links a:hover { color: #1a1a1a; }
+        .topnav-links a.active { color: #1a1a1a; font-weight: 500; }
+
+        /* Main */
+        .main { max-width: 1100px; margin: 0 auto; padding: 130px 40px 60px; }
+
+        /* Hero */
+        .hero { padding: 40px 0 80px; animation: fadeUp 0.8s ease both; border-bottom: 1px solid rgba(0,0,0,0.1); }
+        .hero-eyebrow {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.78rem; color: #6a6a6a;
+          letter-spacing: 0.02em; margin-bottom: 36px;
         }
-        .sidebar-social a {
-          width: 40px; height: 40px; border-radius: 10px; border: 1px solid #e5e7eb;
+        .hero-name {
+          font-family: 'Instrument Serif', serif;
+          font-size: clamp(4.5rem, 14vw, 11rem);
+          line-height: 0.92; letter-spacing: -0.04em;
+          font-weight: 400; margin-bottom: 28px;
+        }
+        .hero-name .italic { font-style: italic; color: #a8a092; }
+        .hero-role {
+          display: flex; align-items: center; gap: 20px;
+          margin-bottom: 32px; flex-wrap: wrap;
+        }
+        .hero-role-text {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.85rem; color: #1a1a1a; letter-spacing: 0.01em;
+        }
+        .hero-role-line { flex: 1; min-width: 40px; height: 1px; background: #1a1a1a; }
+        .hero-desc {
+          font-size: 1.1rem; color: #3a3a3a;
+          max-width: 560px; line-height: 1.75; margin-bottom: 28px;
+        }
+        .hero-meta {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.76rem; color: #6a6a6a; margin-bottom: 36px;
+        }
+        .hero-actions {
+          display: flex; align-items: center; gap: 28px;
+          flex-wrap: wrap; margin-bottom: 10px;
+        }
+        .btn-hello {
+          display: inline-flex; align-items: center; gap: 8px;
+          padding: 12px 26px; background: #1a1a1a; color: #f4f2ed;
+          border-radius: 100px; font-size: 0.88rem; font-weight: 500;
+          text-decoration: none; transition: all 0.25s;
+        }
+        .btn-hello:hover { background: #3a3a3a; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        .hero-email {
+          font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;
+          color: #1a1a1a; text-decoration: underline; text-underline-offset: 4px;
+          text-decoration-color: rgba(0,0,0,0.3); transition: text-decoration-color 0.2s;
+        }
+        .hero-email:hover { text-decoration-color: #1a1a1a; }
+        .hero-reply {
+          font-family: 'Instrument Serif', serif; font-style: italic;
+          font-size: 1rem; color: #8a8275; margin-top: 8px;
+        }
+        .hero-stack {
+          margin-top: 64px; padding-top: 32px;
+          border-top: 1px solid rgba(0,0,0,0.08);
+        }
+        .stack-label {
+          font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
+          text-transform: uppercase; color: #8a8275;
+          letter-spacing: 0.1em; margin-bottom: 18px;
+        }
+        .stack-items { display: flex; gap: 28px; flex-wrap: wrap; align-items: baseline; }
+        .stack-item {
+          font-family: 'Instrument Serif', serif; font-size: 2.2rem;
+          color: #1a1a1a; line-height: 1;
+        }
+        .stack-item .sep { color: #c4c0b5; margin: 0 -10px; }
+
+        /* Decorative divider */
+        .divider-decor {
           display: flex; align-items: center; justify-content: center;
-          color: #6b7280; text-decoration: none; font-size: 0.9rem; transition: all 0.2s;
+          gap: 22px; padding: 70px 0; animation: fadeUp 0.8s ease both;
+          flex-wrap: wrap;
         }
-        .sidebar-social a:hover { border-color: #2d9c6c; color: #2d9c6c; background: #f0fdf4; }
+        .divider-decor .star { font-size: 1.1rem; color: #8a8275; }
+        .divider-decor .plus { font-size: 1.5rem; color: #1a1a1a; font-weight: 300; }
+        .divider-decor .label {
+          font-family: 'Instrument Serif', serif; font-style: italic;
+          font-size: 1.35rem; color: #5a5a5a;
+        }
 
-        .main { margin-left: 300px; min-height: 100vh; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 40px; }
+        /* Stats */
+        .stats {
+          display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+          padding: 48px 0; border-top: 1px solid rgba(0,0,0,0.1);
+          border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        .stat { animation: fadeUp 0.8s ease both; }
+        .stat:nth-child(2) { animation-delay: 0.08s; }
+        .stat:nth-child(3) { animation-delay: 0.16s; }
+        .stat:nth-child(4) { animation-delay: 0.24s; }
+        .stat-star { font-size: 0.95rem; color: #8a8275; margin-bottom: 14px; }
+        .stat-value {
+          font-family: 'Instrument Serif', serif; font-size: 2.8rem;
+          line-height: 1; margin-bottom: 10px; font-weight: 400;
+          letter-spacing: -0.02em;
+        }
+        .stat-label {
+          font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+          color: #5a5a5a; text-transform: uppercase;
+          letter-spacing: 0.08em; line-height: 1.4;
+        }
+        .stats-caption {
+          text-align: center; font-family: 'Instrument Serif', serif;
+          font-style: italic; font-size: 1.5rem; color: #5a5a5a;
+          padding: 48px 0 80px;
+        }
 
-        .section { padding: 64px 0; animation: fadeUp 0.7s ease both; }
-        .section-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 32px; display: flex; align-items: center; gap: 12px; color: #111827; text-transform: uppercase; letter-spacing: 0.05em; }
-        .section-title::after { content: ''; flex: 1; height: 1px; background: #e5e7eb; }
+        /* Section */
+        .section { padding: 90px 0; animation: fadeUp 0.8s ease both; border-bottom: 1px solid rgba(0,0,0,0.1); }
+        .section-head { margin-bottom: 56px; }
+        .section-num {
+          font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
+          color: #8a8275; letter-spacing: 0.1em; margin-bottom: 10px;
+        }
+        .section-title {
+          font-family: 'Instrument Serif', serif;
+          font-size: clamp(2.6rem, 6vw, 4.2rem);
+          line-height: 1; font-weight: 400;
+          margin-bottom: 14px; letter-spacing: -0.025em;
+        }
+        .section-sub {
+          font-family: 'Instrument Serif', serif; font-style: italic;
+          font-size: 1.05rem; color: #8a8275;
+          display: flex; align-items: center; gap: 14px;
+        }
+        .section-sub::after {
+          content: ''; flex: 1; height: 1px;
+          background: rgba(0,0,0,0.12); max-width: 320px;
+        }
 
+        /* About cards */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .about-card {
+          padding: 36px 32px; border: 1px solid rgba(0,0,0,0.1);
+          border-radius: 4px; transition: all 0.3s;
+          background: rgba(255,255,255,0.4);
+        }
+        .about-card:hover {
+          background: rgba(255,255,255,0.75);
+          border-color: rgba(0,0,0,0.2);
+          transform: translateY(-2px);
+        }
+        .about-card-icon { font-size: 1.5rem; margin-bottom: 18px; }
+        .about-card-label {
+          font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
+          text-transform: uppercase; letter-spacing: 0.1em;
+          color: #8a8275; margin-bottom: 10px;
+        }
+        .about-card-title {
+          font-family: 'Instrument Serif', serif; font-size: 1.6rem;
+          font-weight: 400; margin-bottom: 14px; line-height: 1.2;
+          letter-spacing: -0.01em;
+        }
+        .about-card-desc { font-size: 0.92rem; color: #3a3a3a; line-height: 1.75; }
+        .about-card-fun {
+          margin-top: 18px; padding-top: 16px;
+          border-top: 1px dashed rgba(0,0,0,0.15);
+          font-family: 'JetBrains Mono', monospace; font-size: 0.74rem;
+          color: #8a8275; font-style: italic;
+        }
+
+        /* Expertise */
+        .expertise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px 80px; }
+        .expertise-col h4 {
+          font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;
+          text-transform: uppercase; letter-spacing: 0.1em;
+          color: #8a8275; margin-bottom: 22px; padding-bottom: 14px;
+          border-bottom: 1px solid rgba(0,0,0,0.1);
+          display: flex; align-items: center; justify-content: space-between;
+        }
+        .expertise-col h4 .count { color: #c4c0b5; }
+        .expertise-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+        .expertise-list li {
+          font-family: 'Instrument Serif', serif; font-size: 1.45rem;
+          color: #1a1a1a; line-height: 1.3; display: flex;
+          align-items: baseline; gap: 14px;
+        }
+        .expertise-list li::before {
+          content: '·'; color: #8a8275; font-size: 1.5rem;
+        }
+
+        /* Quote */
+        .quote {
+          text-align: center; padding: 100px 20px 100px;
+          font-family: 'Instrument Serif', serif;
+          font-size: clamp(2rem, 4vw, 3rem); font-style: italic;
+          line-height: 1.25; color: #1a1a1a;
+          animation: fadeUp 0.8s ease both;
+        }
+        .quote-author {
+          display: block; font-style: normal; font-size: 0.82rem;
+          font-family: 'JetBrains Mono', monospace; color: #8a8275;
+          margin-top: 28px; letter-spacing: 0.08em;
+        }
+
+        /* Connect */
+        .connect-grid {
+          display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+          border: 1px solid rgba(0,0,0,0.1); border-radius: 4px; overflow: hidden;
+        }
+        .connect-item {
+          display: flex; align-items: center; justify-content: space-between;
+          padding: 28px 36px; text-decoration: none; color: #1a1a1a;
+          border-bottom: 1px solid rgba(0,0,0,0.1);
+          border-right: 1px solid rgba(0,0,0,0.1);
+          transition: all 0.25s; background: rgba(255,255,255,0.4);
+        }
+        .connect-item:nth-child(2n) { border-right: none; }
+        .connect-item:nth-last-child(-n+2) { border-bottom: none; }
+        .connect-item:hover { background: #1a1a1a; color: #f4f2ed; }
+        .connect-label {
+          font-family: 'JetBrains Mono', monospace; font-size: 0.74rem;
+          text-transform: uppercase; letter-spacing: 0.1em;
+          color: #8a8275; margin-bottom: 8px;
+        }
+        .connect-item:hover .connect-label { color: rgba(244,242,237,0.6); }
+        .connect-value {
+          font-family: 'Instrument Serif', serif; font-size: 1.4rem;
+          letter-spacing: -0.01em;
+        }
+        .connect-arrow { font-size: 1.3rem; opacity: 0.4; transition: opacity 0.25s, transform 0.25s; }
+        .connect-item:hover .connect-arrow { opacity: 1; transform: translate(2px, -2px); }
+        .connect-caption {
+          text-align: center; font-family: 'Instrument Serif', serif;
+          font-style: italic; font-size: 1.5rem; color: #5a5a5a;
+          margin-top: 44px;
+        }
+
+        /* Footer */
+        .footer {
+          text-align: center; padding: 70px 0 40px;
+          font-family: 'JetBrains Mono', monospace; font-size: 0.74rem;
+          color: #8a8275; line-height: 1.9;
+        }
+        .footer-links { display: flex; justify-content: center; gap: 26px; margin-top: 18px; }
+        .footer-links a { color: #8a8275; text-decoration: none; transition: color 0.2s; }
+        .footer-links a:hover { color: #1a1a1a; }
+
+        @media (max-width: 768px) {
+          .topnav { padding: 18px 24px; }
+          .topnav-links { gap: 14px; font-size: 0.7rem; }
+          .topnav-links a:nth-child(n+3) { display: none; }
+          .main { padding: 110px 24px 40px; }
+          .stats { grid-template-columns: 1fr 1fr; gap: 32px; }
+          .about-grid { grid-template-columns: 1fr; }
+          .expertise-grid { grid-template-columns: 1fr; gap: 40px; }
+          .connect-grid { grid-template-columns: 1fr; }
+          .connect-item { border-right: none !important; }
+          .connect-item:not(:last-child) { border-bottom: 1px solid rgba(0,0,0,0.1); }
+          .hero-actions { gap: 16px; }
+        }
+      `}),(0,j.jsxs)(`nav`,{className:`topnav`,children:[(0,j.jsxs)(En,{to:`/`,className:`topnav-brand`,children:[`梅冉 `,(0,j.jsx)(`span`,{className:`star`,children:`✦`})]}),(0,j.jsxs)(`div`,{className:`topnav-links`,children:[(0,j.jsx)(En,{to:`/`,className:e?`active`:``,children:`about`}),(0,j.jsx)(En,{to:`/other`,className:e?``:`active`,children:`experience`}),(0,j.jsx)(`a`,{href:`https://github.com/Kyan-Shida`,target:`_blank`,rel:`noreferrer`,children:`github`}),(0,j.jsx)(`a`,{href:`mailto:2957837612@qq.com`,children:`email`})]})]}),(0,j.jsxs)(`main`,{className:`main`,children:[(0,j.jsxs)(`section`,{className:`hero`,children:[(0,j.jsx)(`div`,{className:`hero-eyebrow`,children:`hello, i'm 👋`}),(0,j.jsxs)(`h1`,{className:`hero-name`,children:[`梅`,(0,j.jsx)(`span`,{className:`italic`,children:`冉`})]}),(0,j.jsxs)(`div`,{className:`hero-role`,children:[(0,j.jsx)(`span`,{className:`hero-role-text`,children:`AI 产品经理 · 全栈思维`}),(0,j.jsx)(`span`,{className:`hero-role-line`})]}),(0,j.jsx)(`p`,{className:`hero-desc`,children:`计算机专业背景，独立负责过 AI 产品从 0 到 1 的落地。 擅长用户洞察、数据分析与商业场景设计，懂技术的产品人，追求优雅与增长。`}),(0,j.jsx)(`div`,{className:`hero-meta`,children:`安徽科技工程大学 · 2026 届 · 计算机科学与技术`}),(0,j.jsxs)(`div`,{className:`hero-actions`,children:[(0,j.jsx)(`a`,{href:`mailto:2957837612@qq.com`,className:`btn-hello`,children:`say hello 👋`}),(0,j.jsx)(`a`,{href:`mailto:2957837612@qq.com`,className:`hero-email`,children:`2957837612@qq.com`})]}),(0,j.jsx)(`div`,{className:`hero-reply`,children:`i actually reply`}),(0,j.jsxs)(`div`,{className:`hero-stack`,children:[(0,j.jsx)(`div`,{className:`stack-label`,children:`my stack`}),(0,j.jsxs)(`div`,{className:`stack-items`,children:[(0,j.jsx)(`span`,{className:`stack-item`,children:`Axure`}),(0,j.jsx)(`span`,{className:`stack-item`,children:`SQL`}),(0,j.jsx)(`span`,{className:`stack-item`,children:`Py`}),(0,j.jsx)(`span`,{className:`stack-item`,children:`Prompt`}),(0,j.jsx)(`span`,{className:`stack-item`,children:`RAG`}),(0,j.jsx)(`span`,{className:`stack-item`,children:`Dify`})]})]})]}),(0,j.jsxs)(`div`,{className:`divider-decor`,children:[(0,j.jsx)(`span`,{className:`star`,children:`✦`}),(0,j.jsx)(`span`,{className:`plus`,children:`+`}),(0,j.jsx)(`span`,{className:`label`,children:`that's me`}),(0,j.jsx)(`span`,{className:`star`,children:`✦`})]}),(0,j.jsxs)(`div`,{className:`stats`,children:[(0,j.jsxs)(`div`,{className:`stat`,children:[(0,j.jsx)(`div`,{className:`stat-star`,children:`✦`}),(0,j.jsx)(`div`,{className:`stat-value`,children:`300+`}),(0,j.jsx)(`div`,{className:`stat-label`,children:`有效问卷回收`})]}),(0,j.jsxs)(`div`,{className:`stat`,children:[(0,j.jsx)(`div`,{className:`stat-star`,children:`✦`}),(0,j.jsx)(`div`,{className:`stat-value`,children:`50%`}),(0,j.jsx)(`div`,{className:`stat-label`,children:`效率提升`})]}),(0,j.jsxs)(`div`,{className:`stat`,children:[(0,j.jsx)(`div`,{className:`stat-star`,children:`✦`}),(0,j.jsx)(`div`,{className:`stat-value`,children:`+28%`}),(0,j.jsx)(`div`,{className:`stat-label`,children:`ARPU 增长`})]}),(0,j.jsxs)(`div`,{className:`stat`,children:[(0,j.jsx)(`div`,{className:`stat-star`,children:`✦`}),(0,j.jsx)(`div`,{className:`stat-value`,children:`2`}),(0,j.jsx)(`div`,{className:`stat-label`,children:`AI 项目落地`})]})]}),(0,j.jsx)(`div`,{className:`stats-caption`,children:`pretty cool, right?`}),(0,j.jsxs)(`section`,{className:`section`,children:[(0,j.jsxs)(`div`,{className:`section-head`,children:[(0,j.jsx)(`div`,{className:`section-num`,children:`01 / about`}),(0,j.jsx)(`h2`,{className:`section-title`,children:`the short version`}),(0,j.jsx)(`div`,{className:`section-sub`,children:`psst — keep reading`})]}),(0,j.jsxs)(`div`,{className:`about-grid`,children:[(0,j.jsxs)(`div`,{className:`about-card`,children:[(0,j.jsx)(`div`,{className:`about-card-icon`,children:`💼`}),(0,j.jsx)(`div`,{className:`about-card-label`,children:`current focus`}),(0,j.jsx)(`div`,{className:`about-card-title`,children:`AI 产品经理`}),(0,j.jsx)(`div`,{className:`about-card-desc`,children:`计算机科学本科，独立完成 AI 产品从 0 到 1 落地， 从市场调研到 PRD、原型、上线、迭代全链路负责。`}),(0,j.jsx)(`div`,{className:`about-card-fun`,children:`☕ fun fact: 主导过 6 次 A/B 实验`})]}),(0,j.jsxs)(`div`,{className:`about-card`,children:[(0,j.jsx)(`div`,{className:`about-card-icon`,children:`📍`}),(0,j.jsx)(`div`,{className:`about-card-label`,children:`based in`}),(0,j.jsx)(`div`,{className:`about-card-title`,children:`安徽科技工程大学`}),(0,j.jsx)(`div`,{className:`about-card-desc`,children:`计算机科学与技术 · 本科 / 2022 – 2026`}),(0,j.jsx)(`div`,{className:`about-card-fun`,children:`🎓 校三等奖学金 · 省级创新创业铜奖`})]}),(0,j.jsxs)(`div`,{className:`about-card`,children:[(0,j.jsx)(`div`,{className:`about-card-icon`,children:`🧠`}),(0,j.jsx)(`div`,{className:`about-card-label`,children:`what drives me`}),(0,j.jsx)(`div`,{className:`about-card-title`,children:`数据驱动决策`}),(0,j.jsx)(`div`,{className:`about-card-desc`,children:`擅长用 A/B 实验验证假设，从用户洞察到商业目标全链路思考， 把 AI 能力转化为真实的产品价值。`}),(0,j.jsx)(`div`,{className:`about-card-fun`,children:`🤖 currently exploring RAG & Dify`})]}),(0,j.jsxs)(`div`,{className:`about-card`,children:[(0,j.jsx)(`div`,{className:`about-card-icon`,children:`🤖`}),(0,j.jsx)(`div`,{className:`about-card-label`,children:`expertise`}),(0,j.jsx)(`div`,{className:`about-card-title`,children:`AI 落地能力`}),(0,j.jsx)(`div`,{className:`about-card-desc`,children:`从大模型选型到 RAG 搭建，从 Prompt 工程到内购策略， 把 AI 转化为可量化的产品指标。`}),(0,j.jsx)(`div`,{className:`about-card-fun`,children:`✨ Prompt 优化使采纳率 +40%`})]})]})]}),(0,j.jsxs)(`section`,{className:`section`,children:[(0,j.jsxs)(`div`,{className:`section-head`,children:[(0,j.jsx)(`div`,{className:`section-num`,children:`02 / expertise`}),(0,j.jsx)(`h2`,{className:`section-title`,children:`what i work with`}),(0,j.jsx)(`div`,{className:`section-sub`,children:`always learning more`})]}),(0,j.jsxs)(`div`,{className:`expertise-grid`,children:[(0,j.jsxs)(`div`,{className:`expertise-col`,children:[(0,j.jsxs)(`h4`,{children:[`Technical `,(0,j.jsx)(`span`,{className:`count`,children:`05`})]}),(0,j.jsxs)(`ul`,{className:`expertise-list`,children:[(0,j.jsx)(`li`,{children:`SQL & 数据分析`}),(0,j.jsx)(`li`,{children:`Python`}),(0,j.jsx)(`li`,{children:`Prompt 工程`}),(0,j.jsx)(`li`,{children:`RAG 系统`}),(0,j.jsx)(`li`,{children:`大模型选型`})]})]}),(0,j.jsxs)(`div`,{className:`expertise-col`,children:[(0,j.jsxs)(`h4`,{children:[`Product `,(0,j.jsx)(`span`,{className:`count`,children:`05`})]}),(0,j.jsxs)(`ul`,{className:`expertise-list`,children:[(0,j.jsx)(`li`,{children:`Axure RP 原型`}),(0,j.jsx)(`li`,{children:`PRD 文档`}),(0,j.jsx)(`li`,{children:`A/B 实验`}),(0,j.jsx)(`li`,{children:`用户调研`}),(0,j.jsx)(`li`,{children:`竞品分析`})]})]}),(0,j.jsxs)(`div`,{className:`expertise-col`,children:[(0,j.jsxs)(`h4`,{children:[`Tools `,(0,j.jsx)(`span`,{className:`count`,children:`05`})]}),(0,j.jsxs)(`ul`,{className:`expertise-list`,children:[(0,j.jsx)(`li`,{children:`Axure`}),(0,j.jsx)(`li`,{children:`Figma`}),(0,j.jsx)(`li`,{children:`XMind`}),(0,j.jsx)(`li`,{children:`Visio`}),(0,j.jsx)(`li`,{children:`Dify`})]})]}),(0,j.jsxs)(`div`,{className:`expertise-col`,children:[(0,j.jsxs)(`h4`,{children:[`Domains `,(0,j.jsx)(`span`,{className:`count`,children:`04`})]}),(0,j.jsxs)(`ul`,{className:`expertise-list`,children:[(0,j.jsx)(`li`,{children:`AI 产品设计`}),(0,j.jsx)(`li`,{children:`教育科技`}),(0,j.jsx)(`li`,{children:`内容生成`}),(0,j.jsx)(`li`,{children:`IAA/IAP 商业化`})]})]})]})]}),(0,j.jsxs)(`div`,{className:`quote`,children:[`"用产品思维`,(0,j.jsx)(`br`,{}),`探索 AI 边界"`,(0,j.jsx)(`span`,{className:`quote-author`,children:`— 梅冉`})]}),(0,j.jsxs)(`section`,{className:`section`,style:{borderBottom:`none`},children:[(0,j.jsxs)(`div`,{className:`section-head`,children:[(0,j.jsx)(`div`,{className:`section-num`,children:`03 / connect`}),(0,j.jsx)(`h2`,{className:`section-title`,children:`let's be friends`}),(0,j.jsx)(`div`,{className:`section-sub`,children:`don't be shy`})]}),(0,j.jsxs)(`div`,{className:`connect-grid`,children:[(0,j.jsxs)(`a`,{href:`mailto:2957837612@qq.com`,className:`connect-item`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`div`,{className:`connect-label`,children:`Email`}),(0,j.jsx)(`div`,{className:`connect-value`,children:`2957837612@qq.com`})]}),(0,j.jsx)(`span`,{className:`connect-arrow`,children:`↗`})]}),(0,j.jsxs)(`a`,{href:`tel:18726622320`,className:`connect-item`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`div`,{className:`connect-label`,children:`Phone`}),(0,j.jsx)(`div`,{className:`connect-value`,children:`187 2662 2320`})]}),(0,j.jsx)(`span`,{className:`connect-arrow`,children:`↗`})]}),(0,j.jsxs)(`a`,{href:`https://github.com/Kyan-Shida`,target:`_blank`,rel:`noreferrer`,className:`connect-item`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`div`,{className:`connect-label`,children:`GitHub`}),(0,j.jsx)(`div`,{className:`connect-value`,children:`Kyan-Shida`})]}),(0,j.jsx)(`span`,{className:`connect-arrow`,children:`↗`})]}),(0,j.jsxs)(En,{to:`/other`,className:`connect-item`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`div`,{className:`connect-label`,children:`Resume`}),(0,j.jsx)(`div`,{className:`connect-value`,children:`详细履历`})]}),(0,j.jsx)(`span`,{className:`connect-arrow`,children:`↗`})]})]}),(0,j.jsx)(`div`,{className:`connect-caption`,children:`don't be shy — say hi!`})]}),(0,j.jsxs)(`div`,{className:`footer`,children:[`© 2026 梅冉 · 用产品思维探索 AI 边界`,(0,j.jsx)(`br`,{}),`made with ☕ in 安徽`,(0,j.jsxs)(`div`,{className:`footer-links`,children:[(0,j.jsx)(`a`,{href:`https://github.com/Kyan-Shida`,target:`_blank`,rel:`noreferrer`,children:`github`}),(0,j.jsx)(`a`,{href:`mailto:2957837612@qq.com`,children:`email`}),(0,j.jsx)(En,{to:`/other`,children:`resume`})]})]})]})]})}function Vn(){let e=mt().pathname===`/`;return(0,j.jsxs)(`div`,{className:`app`,children:[(0,j.jsx)(`style`,{children:`
+        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+          background: #f4f2ed;
+          color: #1a1a1a;
+          line-height: 1.6;
+          -webkit-font-smoothing: antialiased;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #c4c0b5; border-radius: 3px; }
+
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Top nav */
+        .topnav {
+          position: fixed; top: 0; left: 0; right: 0;
+          display: flex; justify-content: space-between; align-items: center;
+          padding: 22px 40px;
+          background: rgba(244, 242, 237, 0.85);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
+          border-bottom: 1px solid rgba(0,0,0,0.08);
+          z-index: 50;
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.78rem;
+        }
+        .topnav-brand {
+          font-weight: 500; letter-spacing: -0.01em; text-decoration: none; color: #1a1a1a;
+          display: flex; align-items: center; gap: 8px;
+        }
+        .topnav-brand .star { color: #8a8275; }
+        .topnav-links { display: flex; gap: 28px; align-items: center; }
+        .topnav-links a {
+          color: #6a6a6a; text-decoration: none; transition: color 0.2s;
+          text-transform: lowercase; letter-spacing: 0.02em;
+        }
+        .topnav-links a:hover { color: #1a1a1a; }
+        .topnav-links a.active { color: #1a1a1a; font-weight: 500; }
+
+        /* Main */
+        .main { max-width: 1100px; margin: 0 auto; padding: 130px 40px 60px; }
+
+        /* Back link */
         .back-link {
-          display: inline-flex; align-items: center; gap: 6px; color: #6b7280;
-          text-decoration: none; font-size: 0.9rem; font-weight: 500; margin-bottom: 16px; transition: color 0.2s;
+          display: inline-flex; align-items: center; gap: 8px;
+          font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;
+          color: #6a6a6a; text-decoration: none; margin-bottom: 40px;
+          transition: color 0.2s; letter-spacing: 0.02em;
         }
-        .back-link:hover { color: #2d9c6c; }
+        .back-link:hover { color: #1a1a1a; }
 
-        /* Timeline */
-        .timeline { position: relative; padding-left: 32px; }
-        .timeline::before {
-          content: ''; position: absolute; left: 7px; top: 12px; bottom: 12px;
-          width: 2px; background: #e5e7eb;
+        /* Section */
+        .section { padding: 70px 0; animation: fadeUp 0.8s ease both; border-bottom: 1px solid rgba(0,0,0,0.1); }
+        .section-head { margin-bottom: 56px; }
+        .section-num {
+          font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
+          color: #8a8275; letter-spacing: 0.1em; margin-bottom: 10px;
         }
-        .timeline-item { position: relative; margin-bottom: 48px; }
-        .timeline-item::before {
-          content: ''; position: absolute; left: -29px; top: 8px;
-          width: 14px; height: 14px; border-radius: 50%; background: #fff;
-          border: 3px solid #2d9c6c; box-shadow: 0 0 0 4px #f0fdf4;
+        .section-title {
+          font-family: 'Instrument Serif', serif;
+          font-size: clamp(2.6rem, 6vw, 4.2rem);
+          line-height: 1; font-weight: 400;
+          margin-bottom: 14px; letter-spacing: -0.025em;
         }
-        .timeline-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 8px; }
-        .timeline-title { font-size: 1.15rem; font-weight: 700; color: #111827; }
-        .timeline-date { font-size: 0.85rem; color: #6b7280; font-weight: 500; background: #f3f4f6; padding: 4px 12px; border-radius: 6px; }
-        .timeline-role { color: #2d9c6c; font-weight: 600; font-size: 0.9rem; margin-bottom: 12px; }
-        .timeline-content { color: #4b5563; line-height: 1.8; font-size: 0.95rem; }
-        .timeline-content ul { padding-left: 18px; }
-        .timeline-content li { margin-bottom: 8px; }
-        .timeline-content strong { color: #111827; font-weight: 600; }
-        .timeline-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-        .tag {
-          display: inline-block; padding: 4px 12px; background: #f3f4f6; color: #374151;
-          border-radius: 6px; font-size: 0.78rem; font-weight: 500;
+        .section-sub {
+          font-family: 'Instrument Serif', serif; font-style: italic;
+          font-size: 1.05rem; color: #8a8275;
+          display: flex; align-items: center; gap: 14px;
         }
-        .tag-accent { background: #f0fdf4; color: #15803d; }
+        .section-sub::after {
+          content: ''; flex: 1; height: 1px;
+          background: rgba(0,0,0,0.12); max-width: 320px;
+        }
 
-        /* Cards */
-        .card {
-          background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 28px;
+        /* Experience list */
+        .exp-list { display: flex; flex-direction: column; gap: 4px; }
+        .exp-item {
+          display: grid; grid-template-columns: 80px 1fr;
+          gap: 32px; padding: 40px 0;
+          border-bottom: 1px solid rgba(0,0,0,0.08);
+          animation: fadeUp 0.8s ease both;
+          transition: padding 0.3s;
+        }
+        .exp-item:last-child { border-bottom: none; }
+        .exp-item:hover { padding-left: 12px; }
+        .exp-num {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.85rem; color: #8a8275;
+          letter-spacing: 0.04em; padding-top: 6px;
+        }
+        .exp-content { display: flex; flex-direction: column; gap: 16px; }
+        .exp-icon { font-size: 1.6rem; line-height: 1; margin-bottom: 4px; }
+        .exp-meta-row {
+          display: flex; align-items: baseline;
+          gap: 20px; flex-wrap: wrap;
+        }
+        .exp-company {
+          font-family: 'Instrument Serif', serif;
+          font-size: 1.9rem; line-height: 1.1;
+          font-weight: 400; letter-spacing: -0.01em;
+        }
+        .exp-role {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.78rem; color: #6a6a6a;
+          text-transform: uppercase; letter-spacing: 0.08em;
+        }
+        .exp-date {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.78rem; color: #6a6a6a;
+          margin-left: auto; padding: 4px 12px;
+          background: rgba(0,0,0,0.05); border-radius: 100px;
+        }
+        .exp-bullets {
+          list-style: none; display: flex; flex-direction: column; gap: 10px;
+          margin-top: 4px;
+        }
+        .exp-bullets li {
+          font-size: 0.95rem; color: #3a3a3a;
+          line-height: 1.75; padding-left: 22px; position: relative;
+        }
+        .exp-bullets li::before {
+          content: '→'; position: absolute; left: 0; top: 0;
+          color: #8a8275; font-family: 'JetBrains Mono', monospace;
+          font-size: 0.85rem;
+        }
+        .exp-bullets strong { color: #1a1a1a; font-weight: 600; }
+        .exp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+        .exp-tag {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.7rem; padding: 5px 12px;
+          background: rgba(0,0,0,0.05); color: #3a3a3a;
+          border-radius: 100px; letter-spacing: 0.02em;
+          transition: all 0.2s;
+        }
+        .exp-tag:hover { background: #1a1a1a; color: #f4f2ed; }
+        .exp-tag.accent { background: rgba(216, 86, 28, 0.1); color: #b84612; }
+        .exp-tag.accent:hover { background: #b84612; color: #f4f2ed; }
+
+        /* Projects */
+        .proj-grid {
+          display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+        }
+        .proj-card {
+          padding: 36px 32px; border: 1px solid rgba(0,0,0,0.1);
+          border-radius: 4px; transition: all 0.3s;
+          background: rgba(255,255,255,0.4);
+          display: flex; flex-direction: column; gap: 14px;
+        }
+        .proj-card:hover {
+          background: rgba(255,255,255,0.75); border-color: rgba(0,0,0,0.2);
+          transform: translateY(-3px);
+          box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+        }
+        .proj-icon { font-size: 2rem; line-height: 1; }
+        .proj-name {
+          font-family: 'Instrument Serif', serif;
+          font-size: 1.7rem; font-weight: 400;
+          line-height: 1.15; letter-spacing: -0.01em;
+        }
+        .proj-meta {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.74rem; color: #b84612;
+          text-transform: uppercase; letter-spacing: 0.08em;
+        }
+        .proj-desc { font-size: 0.92rem; color: #3a3a3a; line-height: 1.75; }
+        .proj-desc strong { color: #1a1a1a; font-weight: 600; }
+        .proj-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+
+        /* Education */
+        .edu-card {
+          padding: 44px 40px; border: 1px solid rgba(0,0,0,0.1);
+          border-radius: 4px; background: rgba(255,255,255,0.4);
           transition: all 0.3s;
         }
-        .card:hover { box-shadow: 0 12px 32px rgba(0,0,0,0.06); transform: translateY(-2px); border-color: #d1d5db; }
-        .card h3 { font-size: 1.1rem; font-weight: 700; color: #111827; margin-bottom: 4px; }
-        .card .meta { color: #2d9c6c; font-weight: 600; font-size: 0.85rem; margin-bottom: 12px; display: block; }
-        .card p { color: #4b5563; font-size: 0.95rem; line-height: 1.7; }
-
-        .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .project-emoji { font-size: 2rem; margin-bottom: 8px; }
-
-        .education-card { max-width: 640px; }
-        .edu-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
-        .edu-school { font-size: 1.2rem; font-weight: 700; color: #111827; }
-        .edu-major { color: #4b5563; font-size: 0.95rem; margin-bottom: 12px; }
-        .edu-awards { margin-top: 16px; padding-top: 16px; border-top: 1px solid #f3f4f6; color: #6b7280; font-size: 0.9rem; }
-
-        .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-        .contact-item {
-          display: flex; align-items: center; gap: 14px; padding: 20px; background: #fff;
-          border: 1px solid #e5e7eb; border-radius: 14px; text-decoration: none; color: inherit;
-          transition: all 0.25s;
+        .edu-card:hover { background: rgba(255,255,255,0.75); }
+        .edu-row {
+          display: flex; justify-content: space-between;
+          align-items: baseline; gap: 20px; flex-wrap: wrap;
+          margin-bottom: 10px;
         }
-        .contact-item:hover { border-color: #2d9c6c; transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.05); }
-        .contact-icon {
-          width: 44px; height: 44px; background: #f0fdf4; color: #2d9c6c;
-          border-radius: 10px; display: flex; align-items: center; justify-content: center;
-          font-size: 1.2rem; flex-shrink: 0;
+        .edu-school {
+          font-family: 'Instrument Serif', serif;
+          font-size: 2rem; font-weight: 400;
+          letter-spacing: -0.01em; line-height: 1.15;
         }
-        .contact-info h4 { font-size: 0.9rem; font-weight: 600; color: #111827; margin-bottom: 2px; }
-        .contact-info p { font-size: 0.85rem; color: #6b7280; }
+        .edu-date {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.78rem; color: #6a6a6a;
+          padding: 4px 12px; background: rgba(0,0,0,0.05);
+          border-radius: 100px;
+        }
+        .edu-major {
+          font-family: 'Instrument Serif', serif; font-style: italic;
+          font-size: 1.2rem; color: #5a5a5a; margin-bottom: 24px;
+        }
+        .edu-courses {
+          display: flex; flex-wrap: wrap; gap: 8px;
+          margin-bottom: 24px;
+        }
+        .edu-awards {
+          padding-top: 20px; border-top: 1px dashed rgba(0,0,0,0.15);
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.82rem; color: #5a5a5a; line-height: 1.8;
+        }
 
-        .footer { text-align: center; padding: 40px; color: #9ca3af; font-size: 0.875rem; border-top: 1px solid #e5e7eb; margin-top: 20px; }
+        /* Connect */
+        .connect-grid {
+          display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+          border: 1px solid rgba(0,0,0,0.1); border-radius: 4px; overflow: hidden;
+        }
+        .connect-item {
+          display: flex; align-items: center; justify-content: space-between;
+          padding: 28px 36px; text-decoration: none; color: #1a1a1a;
+          border-bottom: 1px solid rgba(0,0,0,0.1);
+          border-right: 1px solid rgba(0,0,0,0.1);
+          transition: all 0.25s; background: rgba(255,255,255,0.4);
+        }
+        .connect-item:nth-child(2n) { border-right: none; }
+        .connect-item:nth-last-child(-n+2) { border-bottom: none; }
+        .connect-item:hover { background: #1a1a1a; color: #f4f2ed; }
+        .connect-label {
+          font-family: 'JetBrains Mono', monospace; font-size: 0.74rem;
+          text-transform: uppercase; letter-spacing: 0.1em;
+          color: #8a8275; margin-bottom: 8px;
+        }
+        .connect-item:hover .connect-label { color: rgba(244,242,237,0.6); }
+        .connect-value { font-family: 'Instrument Serif', serif; font-size: 1.4rem; letter-spacing: -0.01em; }
+        .connect-arrow { font-size: 1.3rem; opacity: 0.4; transition: opacity 0.25s, transform 0.25s; }
+        .connect-item:hover .connect-arrow { opacity: 1; transform: translate(2px, -2px); }
 
-        @media (max-width: 1024px) {
-          .sidebar { display: none; }
-          .main { margin-left: 0; }
-          .projects-grid { grid-template-columns: 1fr; }
-          .contact-grid { grid-template-columns: 1fr; }
+        /* Footer */
+        .footer {
+          text-align: center; padding: 70px 0 40px;
+          font-family: 'JetBrains Mono', monospace; font-size: 0.74rem;
+          color: #8a8275; line-height: 1.9;
         }
-        @media (max-width: 640px) {
-          .container { padding: 0 24px; }
-          .timeline-header { flex-direction: column; }
-          .contact-grid { grid-template-columns: 1fr; }
+        .footer-links { display: flex; justify-content: center; gap: 26px; margin-top: 18px; }
+        .footer-links a { color: #8a8275; text-decoration: none; transition: color 0.2s; }
+        .footer-links a:hover { color: #1a1a1a; }
+
+        @media (max-width: 768px) {
+          .topnav { padding: 18px 24px; }
+          .topnav-links { gap: 14px; font-size: 0.7rem; }
+          .topnav-links a:nth-child(n+3) { display: none; }
+          .main { padding: 110px 24px 40px; }
+          .exp-item { grid-template-columns: 1fr; gap: 12px; padding: 32px 0; }
+          .exp-item:hover { padding-left: 0; }
+          .exp-date { margin-left: 0; }
+          .proj-grid { grid-template-columns: 1fr; }
+          .connect-grid { grid-template-columns: 1fr; }
+          .connect-item { border-right: none !important; }
+          .connect-item:not(:last-child) { border-bottom: 1px solid rgba(0,0,0,0.1); }
         }
-      `}),(0,j.jsxs)(`aside`,{className:`sidebar`,children:[(0,j.jsxs)(`div`,{className:`sidebar-brand`,children:[(0,j.jsx)(`div`,{className:`avatar`,children:`梅`}),(0,j.jsx)(`h1`,{children:`梅冉`}),(0,j.jsx)(`p`,{children:`AI 产品经理 · 计算机科学`})]}),(0,j.jsxs)(`nav`,{className:`sidebar-nav`,children:[(0,j.jsx)(En,{to:`/`,className:e?`active`:``,children:`🏠 首页概览`}),(0,j.jsx)(En,{to:`/other`,className:e?``:`active`,children:`📋 详细履历`}),(0,j.jsx)(`a`,{href:`https://github.com/Kyan-Shida`,target:`_blank`,rel:`noreferrer`,children:`💻 GitHub`})]}),(0,j.jsxs)(`div`,{className:`sidebar-social`,children:[(0,j.jsx)(`a`,{href:`mailto:2957837612@qq.com`,title:`邮箱`,children:`✉️`}),(0,j.jsx)(`a`,{href:`tel:18726622320`,title:`电话`,children:`📞`})]})]}),(0,j.jsxs)(`main`,{className:`main`,children:[(0,j.jsxs)(`div`,{className:`container`,children:[(0,j.jsx)(`div`,{style:{paddingTop:48},children:(0,j.jsx)(En,{to:`/`,className:`back-link`,children:`← 返回首页`})}),(0,j.jsxs)(`section`,{className:`section`,children:[(0,j.jsx)(`h2`,{className:`section-title`,children:`实习经历`}),(0,j.jsxs)(`div`,{className:`timeline`,children:[(0,j.jsxs)(`div`,{className:`timeline-item`,children:[(0,j.jsxs)(`div`,{className:`timeline-header`,children:[(0,j.jsx)(`span`,{className:`timeline-title`,children:`安徽多点美好智能科技有限公司`}),(0,j.jsx)(`span`,{className:`timeline-date`,children:`2025.09 – 2026.03`})]}),(0,j.jsx)(`div`,{className:`timeline-role`,children:`产品实习生`}),(0,j.jsx)(`div`,{className:`timeline-content`,children:(0,j.jsxs)(`ul`,{children:[(0,j.jsxs)(`li`,{children:[`设计朗读文本功能问卷，回收 `,(0,j.jsx)(`strong`,{children:`300+`}),` 有效问卷，提炼"多音字、难块收藏"等核心需求。`]}),(0,j.jsxs)(`li`,{children:[`提出文档自动化处理方案，效率提升 `,(0,j.jsx)(`strong`,{children:`50%`}),`；独立产出 PRD，完成 IAA/IAP 产品设计。`]}),(0,j.jsxs)(`li`,{children:[`主导 `,(0,j.jsx)(`strong`,{children:`6 次 A/B 实验`}),`，3 次方案落地后 LTV 提升 `,(0,j.jsx)(`strong`,{children:`20%+`}),`，IPU 从 1.2 提升至 1.48。`]}),(0,j.jsx)(`li`,{children:`为研发每日创建任务及需求分配，协调进度并处理市场上线问题。`})]})}),(0,j.jsxs)(`div`,{className:`timeline-tags`,children:[(0,j.jsx)(`span`,{className:`tag tag-accent`,children:`用户调研`}),(0,j.jsx)(`span`,{className:`tag tag-accent`,children:`A/B 实验`}),(0,j.jsx)(`span`,{className:`tag`,children:`PRD`}),(0,j.jsx)(`span`,{className:`tag`,children:`数据分析`})]})]}),(0,j.jsxs)(`div`,{className:`timeline-item`,children:[(0,j.jsxs)(`div`,{className:`timeline-header`,children:[(0,j.jsx)(`span`,{className:`timeline-title`,children:`苏州百智通信息技术有限公司`}),(0,j.jsx)(`span`,{className:`timeline-date`,children:`2025.06 – 2025.08`})]}),(0,j.jsx)(`div`,{className:`timeline-role`,children:`产品实习生`}),(0,j.jsx)(`div`,{className:`timeline-content`,children:(0,j.jsxs)(`ul`,{children:[(0,j.jsxs)(`li`,{children:[`线下访谈 `,(0,j.jsx)(`strong`,{children:`12 位教师 + 2 位教务主任`}),`，定位教师积分激励模块痛点，将操作路径从 3 级压缩至 1 级。`]}),(0,j.jsxs)(`li`,{children:[`支撑互动辅导模块灰度测试，整理 `,(0,j.jsx)(`strong`,{children:`20+ 份`}),`用户反馈报告，归类高频问题并输出修复建议。`]}),(0,j.jsxs)(`li`,{children:[`使用飞书追踪待办，闭环率达 `,(0,j.jsx)(`strong`,{children:`90%`}),`，高效响应学校临时需求（如作业批注留痕）。`]})]})}),(0,j.jsxs)(`div`,{className:`timeline-tags`,children:[(0,j.jsx)(`span`,{className:`tag tag-accent`,children:`用户访谈`}),(0,j.jsx)(`span`,{className:`tag`,children:`权限设计`}),(0,j.jsx)(`span`,{className:`tag`,children:`项目管理`}),(0,j.jsx)(`span`,{className:`tag`,children:`飞书`})]})]})]})]}),(0,j.jsxs)(`section`,{className:`section`,children:[(0,j.jsx)(`h2`,{className:`section-title`,children:`项目实践`}),(0,j.jsxs)(`div`,{className:`projects-grid`,children:[(0,j.jsxs)(`div`,{className:`card`,children:[(0,j.jsx)(`div`,{className:`project-emoji`,children:`🏥`}),(0,j.jsx)(`h3`,{children:`AI 健康管家`}),(0,j.jsx)(`span`,{className:`meta`,children:`省级创新项目 · 铜奖`}),(0,j.jsxs)(`p`,{children:[`基于 AI 的医学问答 + 健康知识拓展。独立完成市场调研、PRD、原型设计，借助 Dify 搭建智能体 Demo， 通过 RAG 解决模型幻觉，意图识别准确率提升 `,(0,j.jsx)(`strong`,{children:`50%`}),`。`]}),(0,j.jsxs)(`div`,{className:`timeline-tags`,style:{marginTop:14},children:[(0,j.jsx)(`span`,{className:`tag tag-accent`,children:`RAG`}),(0,j.jsx)(`span`,{className:`tag tag-accent`,children:`Dify`}),(0,j.jsx)(`span`,{className:`tag`,children:`大模型选型`})]})]}),(0,j.jsxs)(`div`,{className:`card`,children:[(0,j.jsx)(`div`,{className:`project-emoji`,children:`📚`}),(0,j.jsx)(`h3`,{children:`AI "文库" APP`}),(0,j.jsx)(`span`,{className:`meta`,children:`实习期间 0-1 产品`}),(0,j.jsxs)(`p`,{children:[`定位解决用户找资料、写文章的困扰。独立完成竞品分析、原型设计，上线后通过 A/B 实验使 ARPU 提升 `,(0,j.jsx)(`strong`,{children:`28%`}),`， 内购人数增加 `,(0,j.jsx)(`strong`,{children:`16%`}),`。优化 Prompt 后用户采纳率提升 `,(0,j.jsx)(`strong`,{children:`40%`}),`。`]}),(0,j.jsxs)(`div`,{className:`timeline-tags`,style:{marginTop:14},children:[(0,j.jsx)(`span`,{className:`tag tag-accent`,children:`0-1 产品`}),(0,j.jsx)(`span`,{className:`tag tag-accent`,children:`Prompt 优化`}),(0,j.jsx)(`span`,{className:`tag`,children:`内购策略`})]})]})]})]}),(0,j.jsxs)(`section`,{className:`section`,children:[(0,j.jsx)(`h2`,{className:`section-title`,children:`教育背景`}),(0,j.jsxs)(`div`,{className:`card education-card`,children:[(0,j.jsxs)(`div`,{className:`edu-header`,children:[(0,j.jsx)(`span`,{className:`edu-school`,children:`安徽科技工程大学`}),(0,j.jsx)(`span`,{className:`timeline-date`,children:`2022.09 – 2026.06`})]}),(0,j.jsx)(`div`,{className:`edu-major`,children:`计算机科学与技术 · 本科`}),(0,j.jsxs)(`div`,{className:`timeline-tags`,children:[(0,j.jsx)(`span`,{className:`tag`,children:`软件工程`}),(0,j.jsx)(`span`,{className:`tag`,children:`数据结构`}),(0,j.jsx)(`span`,{className:`tag`,children:`算法设计`}),(0,j.jsx)(`span`,{className:`tag`,children:`操作系统`}),(0,j.jsx)(`span`,{className:`tag`,children:`计算机组成原理`})]}),(0,j.jsx)(`div`,{className:`edu-awards`,children:`🏆 校三等奖学金 · 省级创新创业铜奖 · 校 ACM 铜奖`})]})]}),(0,j.jsxs)(`section`,{className:`section`,children:[(0,j.jsx)(`h2`,{className:`section-title`,children:`联系我`}),(0,j.jsxs)(`div`,{className:`contact-grid`,children:[(0,j.jsxs)(`a`,{href:`tel:18726622320`,className:`contact-item`,children:[(0,j.jsx)(`div`,{className:`contact-icon`,children:`📞`}),(0,j.jsxs)(`div`,{className:`contact-info`,children:[(0,j.jsx)(`h4`,{children:`电话`}),(0,j.jsx)(`p`,{children:`187 2662 2320`})]})]}),(0,j.jsxs)(`a`,{href:`mailto:2957837612@qq.com`,className:`contact-item`,children:[(0,j.jsx)(`div`,{className:`contact-icon`,children:`✉️`}),(0,j.jsxs)(`div`,{className:`contact-info`,children:[(0,j.jsx)(`h4`,{children:`邮箱`}),(0,j.jsx)(`p`,{children:`2957837612@qq.com`})]})]}),(0,j.jsxs)(`a`,{href:`https://github.com/Kyan-Shida`,target:`_blank`,rel:`noreferrer`,className:`contact-item`,children:[(0,j.jsx)(`div`,{className:`contact-icon`,children:`💻`}),(0,j.jsxs)(`div`,{className:`contact-info`,children:[(0,j.jsx)(`h4`,{children:`GitHub`}),(0,j.jsx)(`p`,{children:`github.com`})]})]})]})]})]}),(0,j.jsx)(`div`,{className:`footer`,children:`© 2026 梅冉 · 用产品思维探索 AI 边界`})]})]})}function Hn(){return(0,j.jsx)(Tn,{children:(0,j.jsxs)(Bt,{children:[(0,j.jsx)(Rt,{path:`/`,element:(0,j.jsx)(Bn,{})}),(0,j.jsx)(Rt,{path:`/other`,element:(0,j.jsx)(Vn,{})})]})})}document.body.style.margin=`0`,document.body.style.fontFamily=`-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`,(0,zn.createRoot)(document.getElementById(`root`)).render((0,j.jsx)(x.StrictMode,{children:(0,j.jsx)(Hn,{})}));
+      `}),(0,j.jsxs)(`nav`,{className:`topnav`,children:[(0,j.jsxs)(En,{to:`/`,className:`topnav-brand`,children:[`梅冉 `,(0,j.jsx)(`span`,{className:`star`,children:`✦`})]}),(0,j.jsxs)(`div`,{className:`topnav-links`,children:[(0,j.jsx)(En,{to:`/`,className:e?`active`:``,children:`about`}),(0,j.jsx)(En,{to:`/other`,className:e?``:`active`,children:`experience`}),(0,j.jsx)(`a`,{href:`https://github.com/Kyan-Shida`,target:`_blank`,rel:`noreferrer`,children:`github`}),(0,j.jsx)(`a`,{href:`mailto:2957837612@qq.com`,children:`email`})]})]}),(0,j.jsxs)(`main`,{className:`main`,children:[(0,j.jsx)(En,{to:`/`,className:`back-link`,children:`← back home`}),(0,j.jsxs)(`section`,{className:`section`,children:[(0,j.jsxs)(`div`,{className:`section-head`,children:[(0,j.jsx)(`div`,{className:`section-num`,children:`01 / experience`}),(0,j.jsx)(`h2`,{className:`section-title`,children:`the path so far`}),(0,j.jsx)(`div`,{className:`section-sub`,children:`the journey ✨`})]}),(0,j.jsxs)(`div`,{className:`exp-list`,children:[(0,j.jsxs)(`div`,{className:`exp-item`,children:[(0,j.jsx)(`div`,{className:`exp-num`,children:`01`}),(0,j.jsxs)(`div`,{className:`exp-content`,children:[(0,j.jsx)(`div`,{className:`exp-icon`,children:`🏦`}),(0,j.jsxs)(`div`,{className:`exp-meta-row`,children:[(0,j.jsx)(`span`,{className:`exp-company`,children:`安徽多点美好智能科技`}),(0,j.jsx)(`span`,{className:`exp-role`,children:`产品实习生`}),(0,j.jsx)(`span`,{className:`exp-date`,children:`2025.09 – 2026.03`})]}),(0,j.jsxs)(`ul`,{className:`exp-bullets`,children:[(0,j.jsxs)(`li`,{children:[`设计朗读文本功能问卷，回收 `,(0,j.jsx)(`strong`,{children:`300+`}),` 有效问卷，提炼"多音字、难块收藏"等核心需求。`]}),(0,j.jsxs)(`li`,{children:[`提出文档自动化处理方案，效率提升 `,(0,j.jsx)(`strong`,{children:`50%`}),`；独立产出 PRD，完成 IAA/IAP 产品设计。`]}),(0,j.jsxs)(`li`,{children:[`主导 `,(0,j.jsx)(`strong`,{children:`6 次 A/B 实验`}),`，3 次方案落地后 LTV 提升 `,(0,j.jsx)(`strong`,{children:`20%+`}),`，IPU 从 1.2 提升至 1.48。`]}),(0,j.jsx)(`li`,{children:`为研发每日创建任务及需求分配，协调进度并处理市场上线问题。`})]}),(0,j.jsxs)(`div`,{className:`exp-tags`,children:[(0,j.jsx)(`span`,{className:`exp-tag accent`,children:`用户调研`}),(0,j.jsx)(`span`,{className:`exp-tag accent`,children:`A/B 实验`}),(0,j.jsx)(`span`,{className:`exp-tag`,children:`PRD`}),(0,j.jsx)(`span`,{className:`exp-tag`,children:`数据分析`})]})]})]}),(0,j.jsxs)(`div`,{className:`exp-item`,children:[(0,j.jsx)(`div`,{className:`exp-num`,children:`02`}),(0,j.jsxs)(`div`,{className:`exp-content`,children:[(0,j.jsx)(`div`,{className:`exp-icon`,children:`🏫`}),(0,j.jsxs)(`div`,{className:`exp-meta-row`,children:[(0,j.jsx)(`span`,{className:`exp-company`,children:`苏州百智通信息技术`}),(0,j.jsx)(`span`,{className:`exp-role`,children:`产品实习生`}),(0,j.jsx)(`span`,{className:`exp-date`,children:`2025.06 – 2025.08`})]}),(0,j.jsxs)(`ul`,{className:`exp-bullets`,children:[(0,j.jsxs)(`li`,{children:[`线下访谈 `,(0,j.jsx)(`strong`,{children:`12 位教师 + 2 位教务主任`}),`，定位教师积分激励模块痛点，将操作路径从 3 级压缩至 1 级。`]}),(0,j.jsxs)(`li`,{children:[`支撑互动辅导模块灰度测试，整理 `,(0,j.jsx)(`strong`,{children:`20+ 份`}),`用户反馈报告，归类高频问题并输出修复建议。`]}),(0,j.jsxs)(`li`,{children:[`使用飞书追踪待办，闭环率达 `,(0,j.jsx)(`strong`,{children:`90%`}),`，高效响应学校临时需求（如作业批注留痕）。`]})]}),(0,j.jsxs)(`div`,{className:`exp-tags`,children:[(0,j.jsx)(`span`,{className:`exp-tag accent`,children:`用户访谈`}),(0,j.jsx)(`span`,{className:`exp-tag`,children:`权限设计`}),(0,j.jsx)(`span`,{className:`exp-tag`,children:`项目管理`}),(0,j.jsx)(`span`,{className:`exp-tag`,children:`飞书`})]})]})]})]})]}),(0,j.jsxs)(`section`,{className:`section`,children:[(0,j.jsxs)(`div`,{className:`section-head`,children:[(0,j.jsx)(`div`,{className:`section-num`,children:`02 / projects`}),(0,j.jsx)(`h2`,{className:`section-title`,children:`things i've built`}),(0,j.jsx)(`div`,{className:`section-sub`,children:`from idea to ship`})]}),(0,j.jsxs)(`div`,{className:`proj-grid`,children:[(0,j.jsxs)(`div`,{className:`proj-card`,children:[(0,j.jsx)(`div`,{className:`proj-icon`,children:`🏥`}),(0,j.jsx)(`div`,{className:`proj-name`,children:`AI 健康管家`}),(0,j.jsx)(`div`,{className:`proj-meta`,children:`省级创新项目 · 铜奖`}),(0,j.jsxs)(`div`,{className:`proj-desc`,children:[`基于 AI 的医学问答 + 健康知识拓展。独立完成市场调研、PRD、原型设计， 借助 Dify 搭建智能体 Demo，通过 RAG 解决模型幻觉， 意图识别准确率提升 `,(0,j.jsx)(`strong`,{children:`50%`}),`。`]}),(0,j.jsxs)(`div`,{className:`exp-tags`,children:[(0,j.jsx)(`span`,{className:`exp-tag accent`,children:`RAG`}),(0,j.jsx)(`span`,{className:`exp-tag accent`,children:`Dify`}),(0,j.jsx)(`span`,{className:`exp-tag`,children:`大模型选型`})]})]}),(0,j.jsxs)(`div`,{className:`proj-card`,children:[(0,j.jsx)(`div`,{className:`proj-icon`,children:`📚`}),(0,j.jsx)(`div`,{className:`proj-name`,children:`AI "文库" APP`}),(0,j.jsx)(`div`,{className:`proj-meta`,children:`实习期间 0-1 产品`}),(0,j.jsxs)(`div`,{className:`proj-desc`,children:[`定位解决用户找资料、写文章的困扰。独立完成竞品分析、原型设计， 上线后通过 A/B 实验使 ARPU 提升 `,(0,j.jsx)(`strong`,{children:`28%`}),`， 内购人数增加 `,(0,j.jsx)(`strong`,{children:`16%`}),`。优化 Prompt 后用户采纳率提升 `,(0,j.jsx)(`strong`,{children:`40%`}),`。`]}),(0,j.jsxs)(`div`,{className:`exp-tags`,children:[(0,j.jsx)(`span`,{className:`exp-tag accent`,children:`0-1 产品`}),(0,j.jsx)(`span`,{className:`exp-tag accent`,children:`Prompt 优化`}),(0,j.jsx)(`span`,{className:`exp-tag`,children:`内购策略`})]})]})]})]}),(0,j.jsxs)(`section`,{className:`section`,children:[(0,j.jsxs)(`div`,{className:`section-head`,children:[(0,j.jsx)(`div`,{className:`section-num`,children:`03 / education`}),(0,j.jsx)(`h2`,{className:`section-title`,children:`where i studied`}),(0,j.jsx)(`div`,{className:`section-sub`,children:`the foundations`})]}),(0,j.jsxs)(`div`,{className:`edu-card`,children:[(0,j.jsxs)(`div`,{className:`edu-row`,children:[(0,j.jsx)(`span`,{className:`edu-school`,children:`安徽科技工程大学`}),(0,j.jsx)(`span`,{className:`edu-date`,children:`2022.09 – 2026.06`})]}),(0,j.jsx)(`div`,{className:`edu-major`,children:`计算机科学与技术 · 本科`}),(0,j.jsxs)(`div`,{className:`edu-courses`,children:[(0,j.jsx)(`span`,{className:`exp-tag`,children:`软件工程`}),(0,j.jsx)(`span`,{className:`exp-tag`,children:`数据结构`}),(0,j.jsx)(`span`,{className:`exp-tag`,children:`算法设计`}),(0,j.jsx)(`span`,{className:`exp-tag`,children:`操作系统`}),(0,j.jsx)(`span`,{className:`exp-tag`,children:`计算机组成原理`})]}),(0,j.jsx)(`div`,{className:`edu-awards`,children:`🏆 校三等奖学金 · 省级创新创业铜奖 · 校 ACM 铜奖`})]})]}),(0,j.jsxs)(`section`,{className:`section`,style:{borderBottom:`none`},children:[(0,j.jsxs)(`div`,{className:`section-head`,children:[(0,j.jsx)(`div`,{className:`section-num`,children:`04 / connect`}),(0,j.jsx)(`h2`,{className:`section-title`,children:`let's be friends`}),(0,j.jsx)(`div`,{className:`section-sub`,children:`don't be shy`})]}),(0,j.jsxs)(`div`,{className:`connect-grid`,children:[(0,j.jsxs)(`a`,{href:`tel:18726622320`,className:`connect-item`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`div`,{className:`connect-label`,children:`Phone`}),(0,j.jsx)(`div`,{className:`connect-value`,children:`187 2662 2320`})]}),(0,j.jsx)(`span`,{className:`connect-arrow`,children:`↗`})]}),(0,j.jsxs)(`a`,{href:`mailto:2957837612@qq.com`,className:`connect-item`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`div`,{className:`connect-label`,children:`Email`}),(0,j.jsx)(`div`,{className:`connect-value`,children:`2957837612@qq.com`})]}),(0,j.jsx)(`span`,{className:`connect-arrow`,children:`↗`})]}),(0,j.jsxs)(`a`,{href:`https://github.com/Kyan-Shida`,target:`_blank`,rel:`noreferrer`,className:`connect-item`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`div`,{className:`connect-label`,children:`GitHub`}),(0,j.jsx)(`div`,{className:`connect-value`,children:`Kyan-Shida`})]}),(0,j.jsx)(`span`,{className:`connect-arrow`,children:`↗`})]}),(0,j.jsxs)(En,{to:`/`,className:`connect-item`,children:[(0,j.jsxs)(`div`,{children:[(0,j.jsx)(`div`,{className:`connect-label`,children:`Home`}),(0,j.jsx)(`div`,{className:`connect-value`,children:`返回首页`})]}),(0,j.jsx)(`span`,{className:`connect-arrow`,children:`↗`})]})]})]}),(0,j.jsxs)(`div`,{className:`footer`,children:[`© 2026 梅冉 · 用产品思维探索 AI 边界`,(0,j.jsx)(`br`,{}),`made with ☕ in 安徽`,(0,j.jsxs)(`div`,{className:`footer-links`,children:[(0,j.jsx)(`a`,{href:`https://github.com/Kyan-Shida`,target:`_blank`,rel:`noreferrer`,children:`github`}),(0,j.jsx)(`a`,{href:`mailto:2957837612@qq.com`,children:`email`}),(0,j.jsx)(En,{to:`/`,children:`home`})]})]})]})]})}function Hn(){return(0,j.jsx)(Tn,{children:(0,j.jsxs)(Bt,{children:[(0,j.jsx)(Rt,{path:`/`,element:(0,j.jsx)(Bn,{})}),(0,j.jsx)(Rt,{path:`/other`,element:(0,j.jsx)(Vn,{})})]})})}document.body.style.margin=`0`,document.body.style.fontFamily=`-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`,(0,zn.createRoot)(document.getElementById(`root`)).render((0,j.jsx)(x.StrictMode,{children:(0,j.jsx)(Hn,{})}));
