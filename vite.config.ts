@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // 👇 把这里的 '/' 改成你的仓库名，注意前后都要有斜杠！
-  base: '/kyan.github.io/', 
+  base: '/', 
 })
